@@ -1,0 +1,71 @@
+Setup
+
+First you will want to setup a initialisation scene, in this scene you place the given gamemaster object.
+At the game master you can set how you want the detection to funtion, 2d/3d etc. If you want to use 2D and 3D
+you can add a second input processing class. The colour ID of each player can also be set here more info on 
+this in the Util section bellow. Lastly you will want to add something to this scene so it move on to your starting scene.
+
+A score screen is also provided with the package, to set this up open the score screen scene. Set the background image in
+the C_UIRoot. On the C_UIRoot there is a class "ScoreScreenControll" here you can set the index of the scene the score screen
+should move to when people hit "Replay". This defaults to 1 (initialisation scene is assumed to be 0).
+
+In order for UI elements to respond to the smartwall input the canvas they belong to must be set to rendermode "screenspace - camera"
+and linked to the main camera.
+
+
+Smartwall Input
+
+The provided classes on the game manager wil process the input from the smartwall software and will trigger object in 
+accordance with their settings. 
+ - Input Type : weither 2D or 3D detection should be used (you can add another input processing if you want ot use both)
+ - Account For ball size : When this is turned off the system will detect hits at a single point in the center of the detected 
+   object. When turned on the hit detection will detect in the whole area that the object covers, this means your game mite 
+   detect differently or is easyer/harder depending of the size of the ball that is used!
+ - Average all inputs : When turned on detection will be done on the average location of all detected object and for the 
+   average size of those objects. This means that there will only be one input per frame. 
+ - Uninteractible Area Size : In percentage of screen width, the area around a detected input that will not accept inputs 
+   anymore untill the area is clear of all intput for a frame. This is to ensure that a ball does not trigger this multiple times.
+   This setting can be set 130, this would mean that where ever the object hits the wall, there will be no input accepted untill 
+   it is gone.
+
+In order for an object to get triggered by the system it need to have a collider of the type that the input is set on (2D/3D).
+Once a hit is detected all scripts on the game object that implement the I_SmartwallInteractable interface will have thier 
+Hit(vector 3 hitPosition) method invoked. The hitPosition is the vector 3 position in world space that the object was hit.
+
+In the Util folder you will find a SWButton scrip, trow this on a UI button to have its Click event trigger on smartwall input.
+The class wil also add a 2d collider, do not forget to set the correct size for this collider.
+
+
+Language Control
+
+This section to enable the system to hange the language of the game based on the settings. The folder contains several classes 
+starting with L_ , these classes will change de content of the denoted type (L_Text for text objects, etc.). When adding these 
+classes you denote what entrie in the language file needs to be loaded. Empty language files are included in the package and 
+can be found in StreamingAssets/Languages. For images and audio files you will need to create a folder with the same name as 
+the language file (en, nl, fr, etc) add the images and audio files to that folder then denote the relative paths in the language 
+file. The actual setting of the language is done by the smartwall centeral application.
+
+
+Global Settings
+
+The global game settings file allows game settings to be set via the tablet. These settings are read only from the game's
+perspective. To add player setting to be set via the tablet select the gameMaster in a scene or open the prefab, here you will
+find a Global Game Settings class where you can define what settings can be set and to what values. Each entry in the settings 
+list has a label (to be shown in the tablet), Value (its current value), a list of possible values (these will be shown in the 
+dropdown on the tablet), and a Default value. Once you have created the loadout you want press the "Create Settings File" button
+in the inspector, this wil generate the settings XML in the streaming assets folder, subfolder SavedData.
+
+To acces the settings at runtime use the static method GlobalGameSetting.GetSetting(string settingName) This method need the 
+name (label) of the setting you wish to retrieve, this is not case sensative. The return in in string type.
+
+
+Utils
+
+There are several Utilities included in the package:
+
+ - MainThreadDispatcher: This is a staticly instanced class that you can use to post actions or lamda expressions to using the 
+   RunOnMainThread(Action action) method. These actions will then be run on the main thread the upcoming frame.
+ - XML_to_Class: provided static methods for loading and saving classes to/from XML files. Remeber that only public variables 
+   are persisted.
+ - PlayerColourContainer: This class offers a static method, GetPlayerColour(int playerNumber), for getting the color ID of a 
+   player. The colours can be changed at the game master object.

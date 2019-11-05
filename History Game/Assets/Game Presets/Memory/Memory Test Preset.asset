@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e6a6a497724062b37ec06841eda72c, type: 3}
+  m_Name: Memory Test Preset
+  m_EditorClassIdentifier: 
+  matches:
+  - cardDataA:
+      textOrImage: 0
+      name: Jagers en Boeren
+      year: -3000
+      sprite: {fileID: 0}
+    cardDataB:
+      textOrImage: 1
+      name: 
+      year: -3000
+      sprite: {fileID: 21300000, guid: 7afc7290e5f219d46a15b5eed90fe910, type: 3}
+  - cardDataA:
+      textOrImage: 0
+      name: Romeinse Limes
+      year: 40
+      sprite: {fileID: 0}
+    cardDataB:
+      textOrImage: 1
+      name: 
+      year: 40
+      sprite: {fileID: 21300000, guid: 8e1d4f33bcbb0f8438dfb1af9481cbc1, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: 
+      year: 796
+      sprite: {fileID: 21300000, guid: f145273511413d747a4af830097ab30f, type: 3}
+    cardDataB:
+      textOrImage: 1
+      name: 
+      year: 750
+      sprite: {fileID: 21300000, guid: f145273511413d747a4af830097ab30f, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: 
+      year: 1250
+      sprite: {fileID: 21300000, guid: 51ea7be0876547642b03df841b771e87, type: 3}
+    cardDataB:
+      textOrImage: 1
+      name: 
+      year: 1250
+      sprite: {fileID: 21300000, guid: 51ea7be0876547642b03df841b771e87, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: VOC
+      year: 1602
+      sprite: {fileID: 21300000, guid: 0642c3fd464e5c744b3e526c0d41be24, type: 3}
+    cardDataB:
+      textOrImage: 0
+      name: VOC
+      year: 1602
+      sprite: {fileID: 21300000, guid: 0642c3fd464e5c744b3e526c0d41be24, type: 3}
