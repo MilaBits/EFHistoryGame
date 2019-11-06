@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Memory
 {
 	[Serializable]
-	public class MemoryCard : Card, I_SmartwallInteractable
+	public class MemoryCard : Card, ISmartwallInteractable
 	{
 		public Match match;
 		public bool interactable = true;
@@ -32,14 +32,14 @@ namespace Memory
 			else ToggleView(false);
 		}
 
-		public IEnumerator DelayedFlip(bool show, float duration, float delay)
+		private IEnumerator DelayedFlip(bool show, float duration, float delay)
 		{
 			interactable = false;
 			yield return new WaitForSeconds(delay);
 			StartCoroutine(Flip(show, duration));
 		}
 
-		public IEnumerator Flip(bool show, float duration)
+		private IEnumerator Flip(bool show, float duration)
 		{
 			bool flipped = false;
 			interactable = false;
@@ -75,14 +75,14 @@ namespace Memory
 			switch (textOrImage)
 			{
 				case TextOrImage.Text:
-					Text.gameObject.SetActive(show);
+					text.gameObject.SetActive(show);
 					break;
 				case TextOrImage.Image:
-					Image.gameObject.SetActive(show);
+					image.gameObject.SetActive(show);
 					break;
 				case TextOrImage.Both:
-					Text.gameObject.SetActive(show);
-					Image.gameObject.SetActive(show);
+					text.gameObject.SetActive(show);
+					image.gameObject.SetActive(show);
 					break;
 			}
 		}

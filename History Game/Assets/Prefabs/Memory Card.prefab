@@ -68,8 +68,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -116,10 +114,12 @@ MonoBehaviour:
   sprite: {fileID: 0}
   year: 0
   animator: {fileID: 3401619710729493204}
-  Image: {fileID: 2644800594509747387}
-  Text: {fileID: 2991374635788823654}
+  image: {fileID: 2644800594509747387}
+  text: {fileID: 2991374635788823654}
   done: 0
-  visible: 0
+  match:
+    cardA: {fileID: 0}
+    cardB: {fileID: 0}
   interactable: 0
   manager: {fileID: 0}
 --- !u!61 &8152502085393600989
@@ -211,8 +211,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -286,8 +284,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -107,25 +107,25 @@ static class SceneAutoLoader
 	}
  
 	// Properties are remembered as editor preferences.
-	private const string cEditorPrefLoadMasterOnPlay = "SceneAutoLoader.LoadMasterOnPlay";
-	private const string cEditorPrefMasterScene = "SceneAutoLoader.MasterScene";
-	private const string cEditorPrefPreviousScene = "SceneAutoLoader.PreviousScene";
+	private const string CEditorPrefLoadMasterOnPlay = "SceneAutoLoader.LoadMasterOnPlay";
+	private const string CEditorPrefMasterScene = "SceneAutoLoader.MasterScene";
+	private const string CEditorPrefPreviousScene = "SceneAutoLoader.PreviousScene";
  
 	private static bool LoadMasterOnPlay
 	{
-		get { return EditorPrefs.GetBool(cEditorPrefLoadMasterOnPlay, false); }
-		set { EditorPrefs.SetBool(cEditorPrefLoadMasterOnPlay, value); }
+		get { return EditorPrefs.GetBool(CEditorPrefLoadMasterOnPlay, false); }
+		set { EditorPrefs.SetBool(CEditorPrefLoadMasterOnPlay, value); }
 	}
  
 	private static string MasterScene
 	{
-		get { return EditorPrefs.GetString(cEditorPrefMasterScene, "Master.unity"); }
-		set { EditorPrefs.SetString(cEditorPrefMasterScene, value); }
+		get { return EditorPrefs.GetString(CEditorPrefMasterScene, "Master.unity"); }
+		set { EditorPrefs.SetString(CEditorPrefMasterScene, value); }
 	}
  
 	private static string PreviousScene
 	{
-		get { return EditorPrefs.GetString(cEditorPrefPreviousScene, EditorSceneManager.GetActiveScene().path); }
-		set { EditorPrefs.SetString(cEditorPrefPreviousScene, value); }
+		get { return EditorPrefs.GetString(CEditorPrefPreviousScene, EditorSceneManager.GetActiveScene().path); }
+		set { EditorPrefs.SetString(CEditorPrefPreviousScene, value); }
 	}
 }

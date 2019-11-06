@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f96d44366ae465ca9af88716245a836, type: 3}
   m_Name: Test Preset
   m_EditorClassIdentifier: 
-  TimelinePreset: {fileID: 11400000, guid: fb7026c6a603f3248a967198c2d94179, type: 2}
-  MemoryPreset: {fileID: 11400000, guid: 111560f80be7dcf499b641315e7cc02a, type: 2}
+  timelinePreset: {fileID: 11400000, guid: fb7026c6a603f3248a967198c2d94179, type: 2}
+  memoryPreset: {fileID: 11400000, guid: 111560f80be7dcf499b641315e7cc02a, type: 2}

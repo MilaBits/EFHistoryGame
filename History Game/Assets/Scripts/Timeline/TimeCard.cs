@@ -18,11 +18,11 @@ namespace Timeline
 		{
 			for (float passedTime = 0; passedTime < time; passedTime += Time.deltaTime)
 			{
-				Image.color = Color.Lerp(start, end, passedTime);
+				image.color = Color.Lerp(start, end, passedTime);
 				yield return null;
 			}
 
-			Image.color = end;
+			image.color = end;
 		}
 
 		private IEnumerator MoveTransform(Vector3 startPos, Vector3 endPos, float time)

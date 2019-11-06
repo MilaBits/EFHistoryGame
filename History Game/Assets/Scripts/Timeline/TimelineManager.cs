@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -10,7 +11,7 @@ namespace Timeline
 {
 	public class TimelineManager : MonoBehaviour
 	{
-		private TimelineGamePreset gamePreset = default;
+		private TimelineGamePreset _gamePreset = default;
 
 		private List<TimeCard> _cards = new List<TimeCard>();
 		private TimeCard _activeCard;
@@ -24,11 +25,14 @@ namespace Timeline
 		[SerializeField]
 		private RectTransform timeLine = default;
 		[SerializeField]
-		private RectTransform cardContainer = default;
+		private RectTransform cardContainer;
 		[SerializeField]
 		private TimelineHitZone hitZonePrefab = default;
 		[SerializeField]
 		private HorizontalLayoutGroup timeLineLayout = default;
+
+		[SerializeField]
+		private UnityEvent gameDone = new UnityEvent();
 
 		public void ActivateCard()
 		{
@@ -40,19 +44,13 @@ namespace Timeline
 			}
 			else
 			{
-				StartCoroutine(DelayedLoadScene(.75f));
+				gameDone.Invoke();
 			}
-		}
-
-		private IEnumerator DelayedLoadScene(float delay)
-		{
-			yield return new WaitForSeconds(delay);
-			SceneManager.LoadScene("MemoryScene");
 		}
 
 		private void Start()
 		{
-			gamePreset = FindObjectOfType<PresetHolder>().gamePreset.TimelinePreset;
+			_gamePreset = FindObjectOfType<PresetHolder>().gamePreset.timelinePreset;
 
 			LoadCardsFromPreset();
 
@@ -67,10 +65,10 @@ namespace Timeline
 			List<RectTransform> stepsToScale  = new List<RectTransform>();
 
 			StepItem item = Instantiate(yearPrefab, timeLine);
-			item.Init(gamePreset.timeRanges[0].start);
+			item.Init(_gamePreset.timeRanges[0].start);
 			leftoverWidth -= timeLineLayout.spacing * 2;
 
-			foreach (TimeRange timeRange in gamePreset.timeRanges)
+			foreach (TimeRange timeRange in _gamePreset.timeRanges)
 			{
 				for (int year = timeRange.start; year < timeRange.end; year += timeRange.stepSize)
 				{
@@ -105,7 +103,7 @@ namespace Timeline
 
 		private void LoadCardsFromPreset()
 		{
-			foreach (CardData cardData in gamePreset.cards)
+			foreach (CardData cardData in _gamePreset.cards)
 			{
 				TimeCard card = Instantiate(cardPrefab, cardContainer);
 				card.Init(cardData);

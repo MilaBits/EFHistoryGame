@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
@@ -9,7 +7,7 @@ namespace Memory
 {
 	public class MemoryManager : MonoBehaviour
 	{
-		private MemoryGamePreset gamePreset = default;
+		private MemoryGamePreset _gamePreset = default;
 
 		[SerializeField]
 		private List<Match> matches = new List<Match>();
@@ -25,11 +23,11 @@ namespace Memory
 		[SerializeField]
 		private UnityEvent gameDone = new UnityEvent();
 
-		private int doneCount;
+		private int _doneCount;
 
 		private void Start()
 		{
-			gamePreset = FindObjectOfType<PresetHolder>().gamePreset.MemoryPreset;
+			_gamePreset = FindObjectOfType<PresetHolder>().gamePreset.memoryPreset;
 			LoadMatches();
 			ShuffleCards(12);
 		}
@@ -45,7 +43,7 @@ namespace Memory
 					foreach (MemoryCard activeCard in _activeCards)
 					{
 						activeCard.Finish();
-						doneCount++;
+						_doneCount++;
 					}
 				}
 				else
@@ -59,7 +57,7 @@ namespace Memory
 				_activeCards.Clear();
 			}
 
-			if (doneCount >= matches.Count * 2) gameDone.Invoke();
+			if (_doneCount >= matches.Count * 2) gameDone.Invoke();
 		}
 
 		private void ShuffleCards(int iterations)
@@ -74,14 +72,14 @@ namespace Memory
 
 		private void LoadMatches()
 		{
-			foreach (MatchData matchData in gamePreset.matches)
+			foreach (MatchData matchData in _gamePreset.matches)
 			{
 				MemoryCard cardA = Instantiate(cardPrefab, cardContainer);
 				MemoryCard cardB = Instantiate(cardPrefab, cardContainer);
 				cardA.Init(matchData.cardDataA);
 				cardB.Init(matchData.cardDataB);
 
-				Match match = new Match {CardA = cardA, CardB = cardB};
+				Match match = new Match {cardA = cardA, cardB = cardB};
 
 				cardA.manager = cardB.manager = this;
 				cardA.match   = cardB.match   = match;

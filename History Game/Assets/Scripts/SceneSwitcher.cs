@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
@@ -10,12 +11,15 @@ public class SceneSwitcher : MonoBehaviour
 	private string scene = default;
 
 	public void ReloadScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-
 	public void SwitchScene(string sceneName) => SceneManager.LoadScene(sceneName);
+	public void SwitchScene() => SceneManager.LoadScene(scene);
+	public void SwitchSceneWithDelay(string sceneName) => StartCoroutine(SwitchSceneDelayed(sceneName));
 
-	public void SwitchScene()
+
+	private IEnumerator SwitchSceneDelayed(string sceneName)
 	{
-		SceneManager.LoadScene(scene);
+		yield return new WaitForSeconds(0.5f);
+		SceneManager.LoadScene(sceneName);
 	}
 
 	private void OnEnable()

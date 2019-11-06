@@ -16,9 +16,9 @@ public abstract class Card : MonoBehaviour
 	private static readonly int Pulsate = Animator.StringToHash("Pulsate");
 
 	[SerializeField, Space]
-	protected Image Image;
+	protected Image image;
 	[SerializeField]
-	protected TextMeshProUGUI Text;
+	protected TextMeshProUGUI text;
 	[Space]
 	public bool done;
 
@@ -31,7 +31,7 @@ public abstract class Card : MonoBehaviour
 		name        = data.name;
 		year        = data.year;
 
-		Text.text    = name;
-		Image.sprite = sprite;
+		text.text    = name;
+		image.sprite = sprite;
 	}
 }
