@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Timeline
 {
-	public class TimelineHitZone : MonoBehaviour, ISmartwallInteractable
+	public class TimelineHitZone : MonoBehaviour, I_SmartwallInteractable
 	{
 		public UnityEvent onHit = new UnityEvent();
 

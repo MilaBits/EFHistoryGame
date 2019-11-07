@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Memory
 {
 	[Serializable]
-	public class MemoryCard : Card, ISmartwallInteractable
+	public class MemoryCard : Card, I_SmartwallInteractable
 	{
 		public Match match;
 		public bool interactable = true;

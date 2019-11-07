@@ -25,7 +25,7 @@ namespace Timeline
 		[SerializeField]
 		private RectTransform timeLine = default;
 		[SerializeField]
-		private RectTransform cardContainer;
+		private RectTransform cardContainer = default;
 		[SerializeField]
 		private TimelineHitZone hitZonePrefab = default;
 		[SerializeField]

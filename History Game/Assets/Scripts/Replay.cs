@@ -2,7 +2,7 @@ using SmartwallPackage.SmartwallInput;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Replay : MonoBehaviour, ISmartwallInteractable
+public class Replay : MonoBehaviour, I_SmartwallInteractable
 {
 	[SerializeField]
 	private string replayScene = default;
