@@ -245,7 +245,7 @@ MonoBehaviour:
   text: {fileID: 5257062235359753524}
   done: 0
   hitZone: {fileID: 0}
-  highlightColor: {r: 0.9622642, g: 0.90439284, b: 0.21333215, a: 1}
+  highlightColor: {r: 1, g: 0.41020876, b: 0, a: 1}
 --- !u!95 &7784647900433966246
 Animator:
   serializedVersion: 3
