@@ -103,7 +103,7 @@ namespace Timeline
 
 		private void LoadCardsFromPreset()
 		{
-			foreach (CardData cardData in _gamePreset.cards)
+			foreach (CardData cardData in _gamePreset.GetCards())
 			{
 				TimeCard card = Instantiate(cardPrefab, cardContainer);
 				card.Init(cardData);

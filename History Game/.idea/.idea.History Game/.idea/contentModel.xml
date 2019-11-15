@@ -11,8 +11,13 @@
           <e p="GlobalGameSettingsEditor.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="ButtonAttribute.cs" t="Include" />
           <e p="Card.cs" t="Include" />
           <e p="CardData.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="ButtonEditor.cs" t="Include" />
+            <e p="EasyButtonsEditorExtensions.cs" t="Include" />
+          </e>
           <e p="ExtensionMethods.cs" t="Include" />
           <e p="GamePreset.cs" t="Include" />
           <e p="Memory" t="Include">
@@ -28,6 +33,8 @@
           <e p="SceneSwitcher.cs" t="Include" />
           <e p="TextOrImage.cs" t="Include" />
           <e p="Timeline" t="Include">
+            <e p="CardImportData.cs" t="Include" />
+            <e p="cardImportMap.cs" t="Include" />
             <e p="StepItem.cs" t="Include" />
             <e p="TimeCard.cs" t="Include" />
             <e p="TimelineGamePreset.cs" t="Include" />

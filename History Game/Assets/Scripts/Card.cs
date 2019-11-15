@@ -29,7 +29,7 @@ public abstract class Card : MonoBehaviour
 		textOrImage = data.textOrImage;
 		sprite      = data.sprite;
 		name        = data.name;
-		year        = data.year;
+		year        = data.value;
 
 		text.text    = name;
 		image.sprite = sprite;
