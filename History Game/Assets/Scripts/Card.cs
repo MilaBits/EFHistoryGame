@@ -31,7 +31,25 @@ public abstract class Card : MonoBehaviour
 		name        = data.name;
 		year        = data.value;
 
-		text.text    = name;
-		image.sprite = sprite;
+		switch (textOrImage)
+		{
+			case TextOrImage.Name:
+				text.text = name;
+				break;
+			case TextOrImage.Value:
+				text.text = year.ToString();
+				break;
+			case TextOrImage.Image:
+				image.sprite = sprite;
+				break;
+			case TextOrImage.NameAndImage:
+				text.text    = name;
+				image.sprite = sprite;
+				break;
+			case TextOrImage.ValueAndImage:
+				text.text    = year.ToString();
+				image.sprite = sprite;
+				break;
+		}
 	}
 }

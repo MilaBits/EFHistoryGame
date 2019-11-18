@@ -46,6 +46,7 @@ namespace Timeline
 		public void Activate()
 		{
 			Glow(true);
+			Debug.Log($"{name}, {year}");
 			hitZone.gameObject.SetActive(true);
 		}
 	}

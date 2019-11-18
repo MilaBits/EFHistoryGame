@@ -192,7 +192,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gamePreset
       value: 
-      objectReference: {fileID: 11400000, guid: bddb7c42d874a5940bbc5d04ed44bd66,
+      objectReference: {fileID: 11400000, guid: 378e72f9ac659a94ab6680e862cc035f,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d21d40e053a0ceb499904da364436a28, type: 3}

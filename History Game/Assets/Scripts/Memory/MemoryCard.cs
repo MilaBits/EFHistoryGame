@@ -74,13 +74,15 @@ namespace Memory
 		{
 			switch (textOrImage)
 			{
-				case TextOrImage.Text:
-					text.gameObject.SetActive(show);
-					break;
 				case TextOrImage.Image:
 					image.gameObject.SetActive(show);
 					break;
-				case TextOrImage.Both:
+				case TextOrImage.Name:
+				case TextOrImage.Value:
+					text.gameObject.SetActive(show);
+					break;
+				case TextOrImage.NameAndImage:
+				case TextOrImage.ValueAndImage:
 					text.gameObject.SetActive(show);
 					image.gameObject.SetActive(show);
 					break;

@@ -1,6 +1,8 @@
 public enum TextOrImage
 {
-	Text,
+	Name,
+	Value,
 	Image,
-	Both
+	NameAndImage,
+	ValueAndImage
 }

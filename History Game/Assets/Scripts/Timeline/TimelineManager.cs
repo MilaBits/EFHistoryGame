@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -12,10 +13,20 @@ namespace Timeline
 	public class TimelineManager : MonoBehaviour
 	{
 		private TimelineGamePreset _gamePreset = default;
-
 		private List<TimeCard> _cards = new List<TimeCard>();
 		private TimeCard _activeCard;
 
+		[Header("Scene References")]
+		[SerializeField]
+		private TextMeshProUGUI descriptionText;
+		[SerializeField]
+		private RectTransform timeLine = default;
+		[SerializeField]
+		private HorizontalLayoutGroup timeLineLayout = default;
+		[SerializeField]
+		private RectTransform cardContainer = default;
+
+		[Header("Prefab References")]
 		[SerializeField]
 		private TimeCard cardPrefab = default;
 		[SerializeField]
@@ -23,14 +34,9 @@ namespace Timeline
 		[SerializeField]
 		private StepItem yearPrefab = default;
 		[SerializeField]
-		private RectTransform timeLine = default;
-		[SerializeField]
-		private RectTransform cardContainer = default;
-		[SerializeField]
 		private TimelineHitZone hitZonePrefab = default;
-		[SerializeField]
-		private HorizontalLayoutGroup timeLineLayout = default;
 
+		[Space]
 		[SerializeField]
 		private UnityEvent gameDone = new UnityEvent();
 
@@ -77,13 +83,16 @@ namespace Timeline
 
 					if (_cards.Any(x => x.year.Between(year, year + timeRange.stepSize, true)))
 					{
-						TimeCard relevantCard =
-							_cards.First(x => x.year.Between(year, year + timeRange.stepSize, true));
+						TimeCard[] relevantCards =
+							_cards.Where(x => x.year.Between(year, year + timeRange.stepSize, true)).ToArray();
 
-						TimelineHitZone hitZone =
-							Instantiate(hitZonePrefab, stepsToScale[stepsToScale.Count - 1].transform);
-						relevantCard.hitZone = hitZone;
-						hitZone.onHit.AddListener(CheckCard);
+						for (int i = 0; i < relevantCards.Length; i++)
+						{
+							TimelineHitZone hitZone =
+								Instantiate(hitZonePrefab, stepsToScale[stepsToScale.Count - 1].transform);
+							relevantCards[i].hitZone = hitZone;
+							hitZone.onHit.AddListener(CheckCard);
+						}
 					}
 				}
 

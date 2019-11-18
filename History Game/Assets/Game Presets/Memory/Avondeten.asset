@@ -1,0 +1,461 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e6a6a497724062b37ec06841eda72c, type: 3}
+  m_Name: Avondeten
+  m_EditorClassIdentifier: 
+  description: "Raad de Calorie\xEBn"
+  numberOfMatches: 6
+  matches:
+  - cardDataA:
+      textOrImage: 1
+      name: Aardappelen Opscheplepel (50 gr.)
+      value: 58
+      sprite: {fileID: 21300000, guid: ce7d813c9b54ed846adb0f7d1edc8c78, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: Aardappelen Opscheplepel (50 gr.)
+      value: 58
+      sprite: {fileID: 21300000, guid: ce7d813c9b54ed846adb0f7d1edc8c78, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Aardappelpuree Opscheplepel (50 gr.)
+      value: 42
+      sprite: {fileID: 21300000, guid: 75e89cdbf5fd9864fbf0251a20937b43, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: Aardappelpuree Opscheplepel (50 gr.)
+      value: 42
+      sprite: {fileID: 21300000, guid: 75e89cdbf5fd9864fbf0251a20937b43, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Andijvie Opscheplepel (15 gr.)
+      value: 3
+      sprite: {fileID: 21300000, guid: e05e0361f31ad0645a7eda6ad47b7849, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: Andijvie Opscheplepel (15 gr.)
+      value: 3
+      sprite: {fileID: 21300000, guid: e05e0361f31ad0645a7eda6ad47b7849, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Appelmoes Eetlepel (40 gr.)
+      value: 31
+      sprite: {fileID: 21300000, guid: d2e40299d30784b4db9062e75a37cc23, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: Appelmoes Eetlepel (40 gr.)
+      value: 31
+      sprite: {fileID: 21300000, guid: d2e40299d30784b4db9062e75a37cc23, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: biefstuk 100 gr.
+      value: 108
+      sprite: {fileID: 21300000, guid: 931cf87f80d6e264091d727744f71936, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: biefstuk 100 gr.
+      value: 108
+      sprite: {fileID: 21300000, guid: 931cf87f80d6e264091d727744f71936, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: boerenkoolstamppot Bord (400 gr.)
+      value: 340
+      sprite: {fileID: 21300000, guid: e667c8b10861cbc43af0746f97162a14, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: boerenkoolstamppot Bord (400 gr.)
+      value: 340
+      sprite: {fileID: 21300000, guid: e667c8b10861cbc43af0746f97162a14, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Bruine bonen Opscheplepel (60 gr.)
+      value: 76
+      sprite: {fileID: 21300000, guid: 2c7cbd69f9caec34c9932cca20094df8, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: Bruine bonen Opscheplepel (60 gr.)
+      value: 76
+      sprite: {fileID: 21300000, guid: 2c7cbd69f9caec34c9932cca20094df8, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: bruinebonensoep Bord (250 gr.)
+      value: 150
+      sprite: {fileID: 21300000, guid: df09d54242e9463498b4729ed65872eb, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: bruinebonensoep Bord (250 gr.)
+      value: 150
+      sprite: {fileID: 21300000, guid: df09d54242e9463498b4729ed65872eb, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: cheeseburger stuk
+      value: 282
+      sprite: {fileID: 21300000, guid: dbc092122825315468d46d1d9b85349b, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: cheeseburger stuk
+      value: 282
+      sprite: {fileID: 21300000, guid: dbc092122825315468d46d1d9b85349b, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: chili con carne Bord (400 gr.)
+      value: 460
+      sprite: {fileID: 21300000, guid: 1bbb0a97c1055624fafca400792df985, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: chili con carne Bord (400 gr.)
+      value: 460
+      sprite: {fileID: 21300000, guid: 1bbb0a97c1055624fafca400792df985, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: doperwten 100 gr.
+      value: 60
+      sprite: {fileID: 21300000, guid: bebb27be9e1ced94fb328838de889588, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: doperwten 100 gr.
+      value: 60
+      sprite: {fileID: 21300000, guid: bebb27be9e1ced94fb328838de889588, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: 'entrecote Stuk (80 gr.) '
+      value: 154
+      sprite: {fileID: 21300000, guid: 26d3907b15c27264f881319b6d292c65, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: 'entrecote Stuk (80 gr.) '
+      value: 154
+      sprite: {fileID: 21300000, guid: 26d3907b15c27264f881319b6d292c65, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: frikadel Stuk (75 gr.)
+      value: 194
+      sprite: {fileID: 21300000, guid: c0fa7df4267ad204085ecc95714743f5, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: frikadel Stuk (75 gr.)
+      value: 194
+      sprite: {fileID: 21300000, guid: c0fa7df4267ad204085ecc95714743f5, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: frites (ongezouten, gefrituurd) Portie (150 gr.)
+      value: 194
+      sprite: {fileID: 21300000, guid: 6d79be2db4c915046ada7a0be49f1c5f, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: frites (ongezouten, gefrituurd) Portie (150 gr.)
+      value: 194
+      sprite: {fileID: 21300000, guid: 6d79be2db4c915046ada7a0be49f1c5f, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: 'gehaktbal (rund) 100 gram '
+      value: 230
+      sprite: {fileID: 21300000, guid: 88291910b903de54fbe7580e2ef4f98c, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: 'gehaktbal (rund) 100 gram '
+      value: 230
+      sprite: {fileID: 21300000, guid: 88291910b903de54fbe7580e2ef4f98c, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: goulash Opscheplepel (50 gram)
+      value: 52
+      sprite: {fileID: 21300000, guid: 292e576a158367f4b95bb8b68c645089, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: goulash Opscheplepel (50 gram)
+      value: 52
+      sprite: {fileID: 21300000, guid: 292e576a158367f4b95bb8b68c645089, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: groentesoep Kop (250 gram)
+      value: 23
+      sprite: {fileID: 21300000, guid: aab1a8ce377982b409d0ebd2861b56ca, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: groentesoep Kop (250 gram)
+      value: 23
+      sprite: {fileID: 21300000, guid: aab1a8ce377982b409d0ebd2861b56ca, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: hamburger (broodje en ui) Broodje (125 gram)
+      value: 228
+      sprite: {fileID: 21300000, guid: 25c7012ea14885046b0e020c33c24878, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: hamburger (broodje en ui) Broodje (125 gram)
+      value: 228
+      sprite: {fileID: 21300000, guid: 25c7012ea14885046b0e020c33c24878, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: hartige taart Punt (175 gram)
+      value: 425
+      sprite: {fileID: 21300000, guid: 5880adcd86016c744bd0bc08dc1a3112, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: hartige taart Punt (175 gram)
+      value: 425
+      sprite: {fileID: 21300000, guid: 5880adcd86016c744bd0bc08dc1a3112, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: hutspot Opscheplepel, zonder vlees (110 gram)
+      value: 67
+      sprite: {fileID: 21300000, guid: 611ee8a91cd64da4e985692729248189, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: hutspot Opscheplepel, zonder vlees (110 gram)
+      value: 67
+      sprite: {fileID: 21300000, guid: 611ee8a91cd64da4e985692729248189, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: kalkoen Filet, rauw (125 gram)
+      value: 138
+      sprite: {fileID: 21300000, guid: 4c33f4cfa4ba93f47929bc4d005be82c, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: kalkoen Filet, rauw (125 gram)
+      value: 138
+      sprite: {fileID: 21300000, guid: 4c33f4cfa4ba93f47929bc4d005be82c, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: kapucijners Opscheplepel, gekookt (55 gram)
+      value: 67
+      sprite: {fileID: 21300000, guid: 2f16ef6666feb70478606da5cae07d02, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: kapucijners Opscheplepel, gekookt (55 gram)
+      value: 67
+      sprite: {fileID: 21300000, guid: 2f16ef6666feb70478606da5cae07d02, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: karbonade (hals) Stuk, rauw (120 gram)
+      value: 223
+      sprite: {fileID: 21300000, guid: d077280d4c757d547ad09b54f722c6b6, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: karbonade (hals) Stuk, rauw (120 gram)
+      value: 223
+      sprite: {fileID: 21300000, guid: d077280d4c757d547ad09b54f722c6b6, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: kipfilet (gebakken) Stuk (100 gram)
+      value: 187
+      sprite: {fileID: 21300000, guid: b40a02db9521c0a4ab710013f17f81a9, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: kipfilet (gebakken) Stuk (100 gram)
+      value: 187
+      sprite: {fileID: 21300000, guid: b40a02db9521c0a4ab710013f17f81a9, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: lasagna Bord (400 gram)
+      value: 624
+      sprite: {fileID: 21300000, guid: 0983cac249825504a99ba76708ca1307, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: lasagna Bord (400 gram)
+      value: 624
+      sprite: {fileID: 21300000, guid: 0983cac249825504a99ba76708ca1307, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: linzensoep Kop (250 gram)
+      value: 60
+      sprite: {fileID: 21300000, guid: 4e94a77fddc7c594ab905e45d5ca5a97, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: linzensoep Kop (250 gram)
+      value: 60
+      sprite: {fileID: 21300000, guid: 4e94a77fddc7c594ab905e45d5ca5a97, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: macaroni (gekookt) Opscheplepel (50 gram)
+      value: 71
+      sprite: {fileID: 21300000, guid: 7127a083c728c0245ad86db33c14363b, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: macaroni (gekookt) Opscheplepel (50 gram)
+      value: 71
+      sprite: {fileID: 21300000, guid: 7127a083c728c0245ad86db33c14363b, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: nasi goreng (zonder ei) Opschep- lepel (50 gram)
+      value: 83
+      sprite: {fileID: 21300000, guid: 151324ce0f1f1c847a5f8a7f27d99b2e, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: nasi goreng (zonder ei) Opschep- lepel (50 gram)
+      value: 83
+      sprite: {fileID: 21300000, guid: 151324ce0f1f1c847a5f8a7f27d99b2e, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: pannenkoek Groot (160 gram)
+      value: 314
+      sprite: {fileID: 21300000, guid: caf28394baf4be3419c2063d91787611, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: pannenkoek Groot (160 gram)
+      value: 314
+      sprite: {fileID: 21300000, guid: caf28394baf4be3419c2063d91787611, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: pasta (gekookt) Opschep- lepel (50 gram)
+      value: 71
+      sprite: {fileID: 21300000, guid: 38d9e89e5caa79f4db976ada6abf8068, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: pasta (gekookt) Opschep- lepel (50 gram)
+      value: 71
+      sprite: {fileID: 21300000, guid: 38d9e89e5caa79f4db976ada6abf8068, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Patat Bakje (150 gram)
+      value: 462
+      sprite: {fileID: 21300000, guid: ef36c72756a26ab49a1fb1b75fd45f95, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: Patat Bakje (150 gram)
+      value: 462
+      sprite: {fileID: 21300000, guid: ef36c72756a26ab49a1fb1b75fd45f95, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: pizza Hele pizza salami (350 gram)
+      value: 907
+      sprite: {fileID: 21300000, guid: bf2b8f0a8c82b234288813ea1911a906, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: pizza Hele pizza salami (350 gram)
+      value: 907
+      sprite: {fileID: 21300000, guid: bf2b8f0a8c82b234288813ea1911a906, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: prei (gekookt) Opschep- lepel (80 gram)
+      value: 18
+      sprite: {fileID: 21300000, guid: 3d5999232768ee64cb7e72fb0a56009c, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: prei (gekookt) Opschep- lepel (80 gram)
+      value: 18
+      sprite: {fileID: 21300000, guid: 3d5999232768ee64cb7e72fb0a56009c, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: quorn Filet (100 gram)
+      value: 97
+      sprite: {fileID: 21300000, guid: 392756c9ff012554c94a99cf274aa9bb, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: quorn Filet (100 gram)
+      value: 97
+      sprite: {fileID: 21300000, guid: 392756c9ff012554c94a99cf274aa9bb, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: rijst (witte snelkook-, gekookt) Opschep- lepel, gekookt met zout (55
+        gram)
+      value: 80
+      sprite: {fileID: 21300000, guid: 79e7b5b6421d85d47886f47f1b775942, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: rijst (witte snelkook-, gekookt) Opschep- lepel, gekookt met zout (55
+        gram)
+      value: 80
+      sprite: {fileID: 21300000, guid: 79e7b5b6421d85d47886f47f1b775942, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: rookworst Halve ambachtelijke (125 gram)
+      value: 389
+      sprite: {fileID: 21300000, guid: 19aa9140327ce774a990dc9795a74d9e, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: rookworst Halve ambachtelijke (125 gram)
+      value: 389
+      sprite: {fileID: 21300000, guid: 19aa9140327ce774a990dc9795a74d9e, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: shoarma met broodje Stuk (200 gram)
+      value: 424
+      sprite: {fileID: 21300000, guid: 28d034438b36ee245ad109e7e6faa700, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: shoarma met broodje Stuk (200 gram)
+      value: 424
+      sprite: {fileID: 21300000, guid: 28d034438b36ee245ad109e7e6faa700, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: spinazie Opschep- lepel, gekookt met zout (80 gram)
+      value: 20
+      sprite: {fileID: 21300000, guid: 4585c60137533454381943bd1f0264c1, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: spinazie Opschep- lepel, gekookt met zout (80 gram)
+      value: 20
+      sprite: {fileID: 21300000, guid: 4585c60137533454381943bd1f0264c1, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: spruiten Stuk, gekookt met zout (6 gram)
+      value: 3
+      sprite: {fileID: 21300000, guid: 1227b56a17d795a4587ef44fb9747d8b, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: spruiten Stuk, gekookt met zout (6 gram)
+      value: 3
+      sprite: {fileID: 21300000, guid: 1227b56a17d795a4587ef44fb9747d8b, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: tahoe Plak (75 gram)
+      value: 85
+      sprite: {fileID: 21300000, guid: bc9233adf743f4b4a8d4b75a838c892d, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: tahoe Plak (75 gram)
+      value: 85
+      sprite: {fileID: 21300000, guid: bc9233adf743f4b4a8d4b75a838c892d, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: uiensoep (franse) Kop (250 gram)
+      value: 38
+      sprite: {fileID: 21300000, guid: b839a117428f11b49b3d5b840e1b1bd2, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: uiensoep (franse) Kop (250 gram)
+      value: 38
+      sprite: {fileID: 21300000, guid: b839a117428f11b49b3d5b840e1b1bd2, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: vis (halfvet, gem.) Stuk (150 gram, kabeljauw))
+      value: 117
+      sprite: {fileID: 21300000, guid: c1121a411626b9e4eaca21db523891a3, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: vis (halfvet, gem.) Stuk (150 gram, kabeljauw))
+      value: 117
+      sprite: {fileID: 21300000, guid: c1121a411626b9e4eaca21db523891a3, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: vissticks Stuk, gebakken (25 gram)
+      value: 60
+      sprite: {fileID: 21300000, guid: feb2e891af7eb1a4c88e6d1ea07a6e6e, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: vissticks Stuk, gebakken (25 gram)
+      value: 60
+      sprite: {fileID: 21300000, guid: feb2e891af7eb1a4c88e6d1ea07a6e6e, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: zuurkoolstamppot Opschep- lepel (110 gram)
+      value: 58
+      sprite: {fileID: 21300000, guid: d13a8b5787571e54eb85b12c7d73502d, type: 3}
+    cardDataB:
+      textOrImage: 2
+      name: zuurkoolstamppot Opschep- lepel (110 gram)
+      value: 58
+      sprite: {fileID: 21300000, guid: d13a8b5787571e54eb85b12c7d73502d, type: 3}
+  sourceCsv: D:\Data\Desktop\calorie stuff\Avondeten.csv
+  targetImageAssetFolder: Assets/Images/Avondeten/

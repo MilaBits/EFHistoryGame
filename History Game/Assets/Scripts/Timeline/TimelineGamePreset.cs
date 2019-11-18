@@ -15,6 +15,8 @@ namespace Timeline
 	[Serializable]
 	public class TimelineGamePreset : ScriptableObject
 	{
+		public string description;
+
 		[Header("Settings")]
 		[SerializeField]
 		private int numberOfItems = 8;
@@ -25,16 +27,18 @@ namespace Timeline
 
 		public List<TimeRange> timeRanges = new List<TimeRange>();
 
+#if UNITY_EDITOR
+
 		[Header("Import CSV")]
 		[SerializeField]
-		private string sourceCSV;
+		private string sourceCsv = default;
 		[SerializeField]
-		private string targetAssetFolder;
+		private string targetImageAssetFolder = default;
 
 		[Button(ButtonMode.DisabledInPlayMode)]
 		private void ImportCsv()
 		{
-			using (var reader = new StreamReader(sourceCSV, Encoding.GetEncoding(1252)))
+			using (var reader = new StreamReader(sourceCsv, Encoding.GetEncoding(1252)))
 			using (var csv = new CsvReader(reader))
 			{
 				csv.Configuration.RegisterClassMap<cardImportMap>();
@@ -44,9 +48,18 @@ namespace Timeline
 				cards.Clear();
 				for (int i = 0; i < records.Count; i++)
 				{
-					FileInfo fromFile = new FileInfo(records[i].ImagePath);
+					FileInfo fromFile    = new FileInfo(records[i].ImagePath);
+					string   destination = $"{targetImageAssetFolder}{fromFile.Name}";
 
-					FileUtil.CopyFileOrDirectory(fromFile.FullName, $"{targetAssetFolder}{fromFile.Name}");
+					try
+					{
+						FileUtil.CopyFileOrDirectory(fromFile.FullName, destination);
+					}
+					catch (IOException)
+					{
+						Debug.Log(
+							$"{destination} already exists and was skipped. If you wish to replace it, delete the current file or replace it manually.");
+					}
 				}
 
 				AssetDatabase.Refresh();
@@ -56,13 +69,18 @@ namespace Timeline
 					FileInfo fromFile = new FileInfo(record.ImagePath);
 					cards.Add(new CardData
 					{
-						name   = record.Name,
-						value  = record.Value,
-						sprite = AssetDatabase.LoadAssetAtPath<Sprite>($"{targetAssetFolder}{fromFile.Name}")
+						name        = record.Name,
+						value       = record.Value,
+						textOrImage = TextOrImage.NameAndImage,
+						sprite      = AssetDatabase.LoadAssetAtPath<Sprite>($"{targetImageAssetFolder}{fromFile.Name}")
 					});
 				}
+
+				EditorUtility.SetDirty(this);
 			}
 		}
+
+#endif
 
 		public List<CardData> GetCards()
 		{
