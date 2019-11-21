@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -15,7 +16,7 @@ namespace Memory
 
 		[Header("Scene References")]
 		[SerializeField]
-		private TextMeshProUGUI descriptionText;
+		private TextMeshProUGUI descriptionText = default;
 
 		[SerializeField]
 		private RectTransform cardContainer = default;
@@ -32,6 +33,7 @@ namespace Memory
 		private void Start()
 		{
 			_gamePreset = FindObjectOfType<PresetHolder>().gamePreset.memoryPreset;
+			descriptionText.text = _gamePreset.description;
 			LoadMatches();
 			ShuffleCards(12);
 		}
@@ -71,6 +73,18 @@ namespace Memory
 				int childCount = cardContainer.childCount;
 				cardContainer.GetChild(Random.Range(0, childCount))
 							 .SetSiblingIndex(Random.Range(0, childCount));
+			}
+
+			List<MemoryCard> cards = new List<MemoryCard>();
+			for (int i = 0; i < _matches.Count * 2; i++)
+			{
+				cards.Add(cardContainer.GetChild(i).GetComponent<MemoryCard>());
+			}
+
+			cards = cards.OrderByDescending(x => (int) x.textOrImage).ToList();
+			for (int i = 0; i < cards.Count; i++)
+			{
+				cards[i].transform.SetSiblingIndex(i);
 			}
 		}
 

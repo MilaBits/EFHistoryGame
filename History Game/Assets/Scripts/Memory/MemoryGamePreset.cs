@@ -52,7 +52,7 @@ namespace Memory
 												  targetImageAssetFolder);
 						FileUtil.CopyFileOrDirectory(fromFile.FullName, destination);
 					}
-					catch (IOException ex)
+					catch (IOException)
 					{
 						Debug.Log(
 							$"{destination} already exists and was skipped. If you wish to replace it, delete the current file or replace it manually.");

@@ -1,18 +1,26 @@
 using System;
 using System.Collections;
+using SmartwallPackage.SmartwallInput;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Timeline
 {
 	[Serializable]
 	public class TimeCard : Card
 	{
-		public TimelineHitZone hitZone;
+		public Transform target;
+		public bool ready = true;
 
 		[SerializeField]
 		private Color highlightColor;
 
-		public void Move() => StartCoroutine(MoveTransform(transform.position, hitZone.transform.position, .5f));
+		public void Move() =>
+			StartCoroutine(MoveTransform(transform.position, target.transform.position, .5f,
+										 new Vector3(0.2f, 0.2f, 1)));
+
+		public void Move(Vector3 position) => StartCoroutine(MoveTransform(transform.position, position, .5f,
+																		   new Vector3(0.2f, 0.2f, 1)));
 
 		private IEnumerator FadeColor(Color start, Color end, float time)
 		{
@@ -25,10 +33,9 @@ namespace Timeline
 			image.color = end;
 		}
 
-		private IEnumerator MoveTransform(Vector3 startPos, Vector3 endPos, float time)
+		private IEnumerator MoveTransform(Vector3 startPos, Vector3 endPos, float time, Vector3 targetScale)
 		{
-			Vector3 startScale  = transform.localScale;
-			Vector3 targetScale = new Vector3(.2f, .2f, 1);
+			Vector3 startScale = transform.localScale;
 			transform.SetParent(GetComponentInParent<Canvas>().transform);
 
 			for (float passedTime = 0; passedTime < time; passedTime += Time.deltaTime)
@@ -43,11 +50,14 @@ namespace Timeline
 			transform.localScale = targetScale;
 		}
 
+		public void Deactivate()
+		{
+			Glow(false);
+		}
+
 		public void Activate()
 		{
 			Glow(true);
-			Debug.Log($"{name}, {year}");
-			hitZone.gameObject.SetActive(true);
 		}
 	}
 }

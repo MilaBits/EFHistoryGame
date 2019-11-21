@@ -4,8 +4,6 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Timeline
@@ -16,25 +14,20 @@ namespace Timeline
 		private List<TimeCard> _cards = new List<TimeCard>();
 		private TimeCard _activeCard;
 
+		[SerializeField]
+		private float allowedInaccuracy;
+
 		[Header("Scene References")]
 		[SerializeField]
-		private TextMeshProUGUI descriptionText;
+		private TextMeshProUGUI descriptionText = default;
 		[SerializeField]
-		private RectTransform timeLine = default;
-		[SerializeField]
-		private HorizontalLayoutGroup timeLineLayout = default;
+		private TimeLine timeLine = default;
 		[SerializeField]
 		private RectTransform cardContainer = default;
 
 		[Header("Prefab References")]
 		[SerializeField]
 		private TimeCard cardPrefab = default;
-		[SerializeField]
-		private RectTransform stepPrefab = default;
-		[SerializeField]
-		private StepItem yearPrefab = default;
-		[SerializeField]
-		private TimelineHitZone hitZonePrefab = default;
 
 		[Space]
 		[SerializeField]
@@ -42,11 +35,21 @@ namespace Timeline
 
 		public void ActivateCard()
 		{
+			if (_activeCard) _activeCard.Deactivate();
+
 			List<TimeCard> availableCards = _cards.Where(x => !x.done).ToList();
 			if (availableCards.Count > 0)
 			{
-				_activeCard = availableCards[Random.Range(0, availableCards.Count)];
-				_activeCard.Activate();
+				availableCards = availableCards.Where(x => x.ready).ToList();
+				if (availableCards.Count > 0)
+				{
+					_activeCard = availableCards[Random.Range(0, availableCards.Count)];
+					_activeCard.Activate();
+				}
+				else
+				{
+					StartCoroutine(CheckCards(.75f));
+				}
 			}
 			else
 			{
@@ -54,60 +57,24 @@ namespace Timeline
 			}
 		}
 
-		private void Start()
+		public void TemporaryHit(Vector3 position)
 		{
-			_gamePreset = FindObjectOfType<PresetHolder>().gamePreset.timelinePreset;
-
-			LoadCardsFromPreset();
-
-			GenerateTimeline();
-
+			_activeCard.ready = false;
+			_activeCard.Move(position);
 			ActivateCard();
 		}
 
-		private void GenerateTimeline()
+		private void Start()
 		{
-			float               leftoverWidth = timeLine.GetComponent<RectTransform>().rect.width;
-			List<RectTransform> stepsToScale  = new List<RectTransform>();
+			_gamePreset          = FindObjectOfType<PresetHolder>().gamePreset.timelinePreset;
+			descriptionText.text = _gamePreset.description;
 
-			StepItem item = Instantiate(yearPrefab, timeLine);
-			item.Init(_gamePreset.timeRanges[0].start);
-			leftoverWidth -= timeLineLayout.spacing * 2;
+			LoadCardsFromPreset();
 
-			foreach (TimeRange timeRange in _gamePreset.timeRanges)
-			{
-				for (int year = timeRange.start; year < timeRange.end; year += timeRange.stepSize)
-				{
-					stepsToScale.Add(Instantiate(stepPrefab, timeLine));
-					leftoverWidth -= timeLineLayout.spacing;
+			timeLine.GenerateTimeline(_gamePreset);
+			timeLine.AddCards(_cards);
 
-					if (_cards.Any(x => x.year.Between(year, year + timeRange.stepSize, true)))
-					{
-						TimeCard[] relevantCards =
-							_cards.Where(x => x.year.Between(year, year + timeRange.stepSize, true)).ToArray();
-
-						for (int i = 0; i < relevantCards.Length; i++)
-						{
-							TimelineHitZone hitZone =
-								Instantiate(hitZonePrefab, stepsToScale[stepsToScale.Count - 1].transform);
-							relevantCards[i].hitZone = hitZone;
-							hitZone.onHit.AddListener(CheckCard);
-						}
-					}
-				}
-
-				item = Instantiate(yearPrefab, timeLine);
-				item.Init(timeRange.end);
-				leftoverWidth -= timeLineLayout.spacing * 2;
-			}
-
-			leftoverWidth /= stepsToScale.Count;
-			for (int i = 0;
-				i < stepsToScale.Count;
-				i++)
-			{
-				stepsToScale[i].sizeDelta = new Vector2(leftoverWidth, timeLine.rect.size.y);
-			}
+			ActivateCard();
 		}
 
 		private void LoadCardsFromPreset()
@@ -120,11 +87,29 @@ namespace Timeline
 			}
 		}
 
-		private void CheckCard()
+		private IEnumerator CheckCards(float delay)
 		{
-			_activeCard.Move();
-			_activeCard.done = true;
-			_activeCard.hitZone.gameObject.SetActive(false);
+			yield return new WaitForSeconds(delay);
+
+			foreach (TimeCard card in _cards.Where(x => !x.done))
+			{
+				float distance = Vector3.Distance(
+					Camera.main.WorldToScreenPoint(card.transform.position),
+					Camera.main.WorldToScreenPoint(card.target.position));
+
+				if (distance > allowedInaccuracy)
+				{
+					card.transform.localScale = Vector3.one;
+					card.transform.SetParent(cardContainer);
+					card.ready = true;
+				}
+				else
+				{
+					card.done = true;
+					card.Move();
+				}
+			}
+
 			ActivateCard();
 		}
 	}

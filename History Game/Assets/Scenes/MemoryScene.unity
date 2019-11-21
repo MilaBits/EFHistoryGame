@@ -414,11 +414,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d930c0297a7c429b88aff44291d3b942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matches: []
   descriptionText: {fileID: 510854209}
+  cardContainer: {fileID: 1055777387}
   cardPrefab: {fileID: 1659515826858751674, guid: 7e4d4c2c52c365742884b71c45a8bf22,
     type: 3}
-  cardContainer: {fileID: 1055777387}
   gameDone:
     m_PersistentCalls:
       m_Calls:
@@ -589,7 +588,7 @@ MonoBehaviour:
     m_Bottom: 30
   m_ChildAlignment: 1
   m_StartCorner: 0
-  m_StartAxis: 0
+  m_StartAxis: 1
   m_CellSize: {x: 125, y: 125}
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 1

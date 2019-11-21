@@ -8,7 +8,16 @@ namespace Timeline
 		[SerializeField]
 		private TextMeshProUGUI text = default;
 
-		public void Init(int value)
+		public int start;
+		public int end;
+
+		public void InitMinor(int start, int end)
+		{
+			this.start = start;
+			this.end   = end;
+		}
+
+		public void InitMajor(int value)
 		{
 			string result = value < 0 ? $"{-value} V.Chr" : value.ToString();
 			text.text = result;

@@ -27,6 +27,7 @@
             <e p="MemoryGamePreset.cs" t="Include" />
             <e p="MemoryManager.cs" t="Include" />
           </e>
+          <e p="PositionUnityEvent.cs" t="Include" />
           <e p="PresetHolder.cs" t="Include" />
           <e p="Replay.cs" t="Include" />
           <e p="SceneAutoLoader.cs" t="Include" />
@@ -37,6 +38,7 @@
             <e p="cardImportMap.cs" t="Include" />
             <e p="StepItem.cs" t="Include" />
             <e p="TimeCard.cs" t="Include" />
+            <e p="TimeLine.cs" t="Include" />
             <e p="TimelineGamePreset.cs" t="Include" />
             <e p="TimelineHitZone.cs" t="Include" />
             <e p="TimelineManager.cs" t="Include" />
