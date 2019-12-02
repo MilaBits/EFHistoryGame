@@ -88,7 +88,22 @@ namespace Timeline
 
 			Random random = new Random();
 
-			CardData[] returnCards = cards.Where(x => x.value <= timeRanges.Last().end).ToArray();
+			int[] targetNumbers = new int[numberOfItems];
+			for (int i = 0; i < numberOfItems; i++)
+				targetNumbers[i] = random.Next(timeRanges.First().start, timeRanges.Last().end);
+
+			List<CardData> clampedCards = cards
+										 .Where(x => x.value >= timeRanges.First().start &&
+													 x.value <= timeRanges.Last().end)
+										 .ToList();
+
+			CardData[] returnCards = new CardData[numberOfItems];
+			for (int i = 0; i < numberOfItems; i++)
+			{
+				CardData card = clampedCards.OrderBy(n => Math.Abs(n.value - targetNumbers[i])).First();
+				returnCards[i] = card;
+				clampedCards.Remove(card); // Make sure no duplicate cards happen
+			}
 
 			random.Shuffle(returnCards);
 

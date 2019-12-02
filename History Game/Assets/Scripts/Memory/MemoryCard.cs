@@ -80,10 +80,12 @@ namespace Memory
 				case TextOrImage.Name:
 				case TextOrImage.Value:
 					text.gameObject.SetActive(show);
+					text.transform.parent.gameObject.SetActive(show);
 					break;
 				case TextOrImage.NameAndImage:
 				case TextOrImage.ValueAndImage:
 					text.gameObject.SetActive(show);
+					text.transform.parent.gameObject.SetActive(show);
 					image.gameObject.SetActive(show);
 					break;
 			}

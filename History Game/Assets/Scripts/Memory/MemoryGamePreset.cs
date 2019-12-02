@@ -78,7 +78,7 @@ namespace Memory
 							{
 								name        = record.Name,
 								value       = record.Value,
-								textOrImage = TextOrImage.Image,
+								textOrImage = TextOrImage.NameAndImage,
 								sprite      = AssetDatabase.LoadAssetAtPath<Sprite>(destination)
 							}
 						}
