@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoSwitch: 1
-  scene: TimelineScene
+  scene: MemoryScene
 --- !u!54 &1040082430
 Rigidbody:
   m_ObjectHideFlags: 0

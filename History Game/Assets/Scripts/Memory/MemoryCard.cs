@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using SmartwallPackage.SmartwallInput;
 using UnityEngine;
+using Random = System.Random;
 
 namespace Memory
 {
@@ -17,19 +18,24 @@ namespace Memory
 		private void Awake()
 		{
 			Hide(false, 0f);
+			StartCoroutine(DelayedFlip(true, .5f, UnityEngine.Random.Range(.1f, 1f)));
 			interactable = true;
 		}
 
 		public void Reveal(bool animate)
 		{
-			if (animate) StartCoroutine(Flip(true, .5f));
-			else ToggleView(true);
+//			if (animate) StartCoroutine(Flip(true, .5f));
+//			else ToggleView(true);
+
+			Select(true);
 		}
 
 		public void Hide(bool animate, float delay)
 		{
-			if (animate) StartCoroutine(DelayedFlip(false, .5f, .75f));
-			else ToggleView(false);
+//			if (animate) StartCoroutine(DelayedFlip(false, .5f, .75f));
+//			else ToggleView(false);
+
+			Select(false);
 		}
 
 		private IEnumerator DelayedFlip(bool show, float duration, float delay)
@@ -39,9 +45,15 @@ namespace Memory
 			StartCoroutine(Flip(show, duration));
 		}
 
+		private void Select(bool select)
+		{
+			Glow(select);
+			interactable = !select;
+		}
+
 		private IEnumerator Flip(bool show, float duration)
 		{
-			bool flipped = false;
+			bool halfwayDone = false;
 			interactable = false;
 
 			Vector3 start = transform.localScale;
@@ -51,9 +63,9 @@ namespace Memory
 			{
 				float progress = passedTime / duration;
 
-				if (!flipped && progress > 0.5)
+				if (!halfwayDone && progress > 0.5)
 				{
-					flipped = true;
+					halfwayDone = true;
 					Vector3 temp = end;
 					end   = start;
 					start = temp;
@@ -66,7 +78,7 @@ namespace Memory
 			}
 
 			ToggleView(show);
-			if (!show) interactable = true;
+			interactable         = true;
 			transform.localScale = end;
 		}
 
@@ -79,6 +91,7 @@ namespace Memory
 					break;
 				case TextOrImage.Name:
 				case TextOrImage.Value:
+					image.gameObject.SetActive(show);
 					text.gameObject.SetActive(show);
 					text.transform.parent.gameObject.SetActive(show);
 					break;
