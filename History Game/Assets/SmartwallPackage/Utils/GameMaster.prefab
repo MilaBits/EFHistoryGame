@@ -101,7 +101,7 @@ MonoBehaviour:
   InputType: 0
   AccountForBallSize: 0
   AverageAllInputsToOnePoint: 0
-  UninteractableAreaSize: 7
+  UninteractableAreaSize: 20
 --- !u!114 &1292733122895889457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a656c368048e919418ffdf26ef879d3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SettingToMake: []
+  SettingToMake:
+  - Label: Theme
+    Value: Breakfast
+    PossibleValues:
+    - Breakfast
+    - Dinner
+    - History
+    Default: Breakfast
 --- !u!114 &7751319791257838341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,4 +156,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebc138e5f084acabc42ad775c82633d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePreset: {fileID: 11400000, guid: e084add0565180644bf612bac4b90589, type: 2}
+  gamePreset: {fileID: 11400000, guid: 378e72f9ac659a94ab6680e862cc035f, type: 2}
+  themeStrings:
+  - name: Breakfast
+    preset: {fileID: 11400000, guid: bddb7c42d874a5940bbc5d04ed44bd66, type: 2}
+  - name: Dinner
+    preset: {fileID: 11400000, guid: 378e72f9ac659a94ab6680e862cc035f, type: 2}
+  - name: History
+    preset: {fileID: 11400000, guid: e084add0565180644bf612bac4b90589, type: 2}

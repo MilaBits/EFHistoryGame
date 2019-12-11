@@ -19,441 +19,441 @@ MonoBehaviour:
       textOrImage: 1
       name: beschuit 1 stuk (10 gr)
       value: 41
-      sprite: {fileID: 21300000, guid: 3810463d67147714ab273b176ef3a943, type: 3}
+      sprite: {fileID: 21300000, guid: 8bb39e16a7a52b24c933b977fc154df7, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: beschuit 1 stuk (10 gr)
       value: 41
-      sprite: {fileID: 21300000, guid: 3810463d67147714ab273b176ef3a943, type: 3}
+      sprite: {fileID: 21300000, guid: 8bb39e16a7a52b24c933b977fc154df7, type: 3}
   - cardDataA:
       textOrImage: 1
       name: boterhamworst 1 snee (15 gr)
       value: 46
-      sprite: {fileID: 21300000, guid: 6c527e4ce8244b846bb10c77691ac16a, type: 3}
+      sprite: {fileID: 21300000, guid: cd3728385f24e1f42a29036995bb2d54, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: boterhamworst 1 snee (15 gr)
       value: 46
-      sprite: {fileID: 21300000, guid: 6c527e4ce8244b846bb10c77691ac16a, type: 3}
+      sprite: {fileID: 21300000, guid: cd3728385f24e1f42a29036995bb2d54, type: 3}
   - cardDataA:
       textOrImage: 1
       name: Brinta 1 eetlepel (5 gr)
       value: 17
-      sprite: {fileID: 21300000, guid: e82014dfb1173434d866b67b90e2fef4, type: 3}
+      sprite: {fileID: 21300000, guid: d6502aa7d9a9d9b4f907e6e927ababa8, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: Brinta 1 eetlepel (5 gr)
       value: 17
-      sprite: {fileID: 21300000, guid: e82014dfb1173434d866b67b90e2fef4, type: 3}
+      sprite: {fileID: 21300000, guid: d6502aa7d9a9d9b4f907e6e927ababa8, type: 3}
   - cardDataA:
       textOrImage: 1
       name: broodje (wit, zacht) Broodje (45 gr)
       value: 118
-      sprite: {fileID: 21300000, guid: 89773479dc641cd41b2073111181a8bd, type: 3}
+      sprite: {fileID: 21300000, guid: 764a048cfc6866247aa708495976b91b, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: broodje (wit, zacht) Broodje (45 gr)
       value: 118
-      sprite: {fileID: 21300000, guid: 89773479dc641cd41b2073111181a8bd, type: 3}
+      sprite: {fileID: 21300000, guid: 764a048cfc6866247aa708495976b91b, type: 3}
   - cardDataA:
       textOrImage: 1
       name: broodje (muesli) 100 gr.
       value: 273
-      sprite: {fileID: 21300000, guid: b54f658d5795a514cbe4f6e3e66250ac, type: 3}
+      sprite: {fileID: 21300000, guid: 8990e0e21b631c44d902508f2de79195, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: broodje (muesli) 100 gr.
       value: 273
-      sprite: {fileID: 21300000, guid: b54f658d5795a514cbe4f6e3e66250ac, type: 3}
+      sprite: {fileID: 21300000, guid: 8990e0e21b631c44d902508f2de79195, type: 3}
   - cardDataA:
       textOrImage: 1
       name: bruin brood Snee    (35 gr)
       value: 118
-      sprite: {fileID: 21300000, guid: 17f0289edf28c2946a8e93cd55e9f21e, type: 3}
+      sprite: {fileID: 21300000, guid: 827ab47fd8340614b884ee4924438fd8, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: bruin brood Snee    (35 gr)
       value: 118
-      sprite: {fileID: 21300000, guid: 17f0289edf28c2946a8e93cd55e9f21e, type: 3}
+      sprite: {fileID: 21300000, guid: 827ab47fd8340614b884ee4924438fd8, type: 3}
   - cardDataA:
       textOrImage: 1
       name: cervelaatworst Voor 1 snee (15 gr)
       value: 56
-      sprite: {fileID: 21300000, guid: 9aba649068a857249a94439f3f1282e1, type: 3}
+      sprite: {fileID: 21300000, guid: 97a560b51ab31084d8dbde99af40b405, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: cervelaatworst Voor 1 snee (15 gr)
       value: 56
-      sprite: {fileID: 21300000, guid: 9aba649068a857249a94439f3f1282e1, type: 3}
+      sprite: {fileID: 21300000, guid: 97a560b51ab31084d8dbde99af40b405, type: 3}
   - cardDataA:
       textOrImage: 1
       name: Chocoladehagelslag (puur) Voor 1 snee (15 gr)
       value: 67
-      sprite: {fileID: 21300000, guid: b43d27c70d4ff894bac41f520072120e, type: 3}
+      sprite: {fileID: 21300000, guid: 32df085a58778ed49bfc96f4e8755e3d, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: Chocoladehagelslag (puur) Voor 1 snee (15 gr)
       value: 67
-      sprite: {fileID: 21300000, guid: b43d27c70d4ff894bac41f520072120e, type: 3}
+      sprite: {fileID: 21300000, guid: 32df085a58778ed49bfc96f4e8755e3d, type: 3}
   - cardDataA:
       textOrImage: 1
       name: chocoladepasta Voor 1 snee (15 gr)
       value: 85
-      sprite: {fileID: 21300000, guid: ef25ab96b49878240a96f1248204b0c0, type: 3}
+      sprite: {fileID: 21300000, guid: 1aa89baff182c5e4aba4e6114ef418b6, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: chocoladepasta Voor 1 snee (15 gr)
       value: 85
-      sprite: {fileID: 21300000, guid: ef25ab96b49878240a96f1248204b0c0, type: 3}
+      sprite: {fileID: 21300000, guid: 1aa89baff182c5e4aba4e6114ef418b6, type: 3}
   - cardDataA:
       textOrImage: 1
       name: ' cornflakes Portie (30 gr)'
       value: 113
-      sprite: {fileID: 21300000, guid: fd9ce47c009f18f46afd022d82d70a00, type: 3}
+      sprite: {fileID: 21300000, guid: ee0b4d670fb8da44c8db9472e148ed86, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: ' cornflakes Portie (30 gr)'
       value: 113
-      sprite: {fileID: 21300000, guid: fd9ce47c009f18f46afd022d82d70a00, type: 3}
+      sprite: {fileID: 21300000, guid: ee0b4d670fb8da44c8db9472e148ed86, type: 3}
   - cardDataA:
       textOrImage: 1
       name: ' creamcracker 10 gr.'
       value: 47
-      sprite: {fileID: 21300000, guid: fbebefe54fc331541b1d7bc52beb382b, type: 3}
+      sprite: {fileID: 21300000, guid: fd085c62d0b58d24e878a8d85725a9b6, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: ' creamcracker 10 gr.'
       value: 47
-      sprite: {fileID: 21300000, guid: fbebefe54fc331541b1d7bc52beb382b, type: 3}
+      sprite: {fileID: 21300000, guid: fd085c62d0b58d24e878a8d85725a9b6, type: 3}
   - cardDataA:
       textOrImage: 1
       name: croissant 40 gr.
       value: 161
-      sprite: {fileID: 21300000, guid: cc96c50845a3e104a9a1df02a044eec2, type: 3}
+      sprite: {fileID: 21300000, guid: 8de9f943859112a4aacb9eefdbc1bb3f, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: croissant 40 gr.
       value: 161
-      sprite: {fileID: 21300000, guid: cc96c50845a3e104a9a1df02a044eec2, type: 3}
+      sprite: {fileID: 21300000, guid: 8de9f943859112a4aacb9eefdbc1bb3f, type: 3}
   - cardDataA:
       textOrImage: 1
       name: Edammer 40+ Voor 1 snee (20 gr)
       value: 161
-      sprite: {fileID: 21300000, guid: 81f2fcaf8a829e44a9b86bde148731ca, type: 3}
+      sprite: {fileID: 21300000, guid: c1e58d7342c80924a84fac6259bac70d, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: Edammer 40+ Voor 1 snee (20 gr)
       value: 161
-      sprite: {fileID: 21300000, guid: 81f2fcaf8a829e44a9b86bde148731ca, type: 3}
+      sprite: {fileID: 21300000, guid: c1e58d7342c80924a84fac6259bac70d, type: 3}
   - cardDataA:
       textOrImage: 1
       name: ei (gekookt) 50 gr.
       value: 64
-      sprite: {fileID: 21300000, guid: 7379a80ca57ed754889f8f89e072a4d2, type: 3}
+      sprite: {fileID: 21300000, guid: e3f0fc75792f3044cbe27a9dc7bf4150, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: ei (gekookt) 50 gr.
       value: 64
-      sprite: {fileID: 21300000, guid: 7379a80ca57ed754889f8f89e072a4d2, type: 3}
+      sprite: {fileID: 21300000, guid: e3f0fc75792f3044cbe27a9dc7bf4150, type: 3}
   - cardDataA:
       textOrImage: 1
       name: gestampte muisjes Voor 1 snee (15 gr)
       value: 59
-      sprite: {fileID: 21300000, guid: 89f4b38b7c336824fa13ea15e3f31e1b, type: 3}
+      sprite: {fileID: 21300000, guid: 05f7d54d0f5a8cd4591628e8086b58cc, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: gestampte muisjes Voor 1 snee (15 gr)
       value: 59
-      sprite: {fileID: 21300000, guid: 89f4b38b7c336824fa13ea15e3f31e1b, type: 3}
+      sprite: {fileID: 21300000, guid: 05f7d54d0f5a8cd4591628e8086b58cc, type: 3}
   - cardDataA:
       textOrImage: 1
       name: halvarine 5 gr.
       value: 18
-      sprite: {fileID: 21300000, guid: c060e83312776ff478b2dcb43995ec3a, type: 3}
+      sprite: {fileID: 21300000, guid: 71bf5d3320f2ec540b36764e5ad27aba, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: halvarine 5 gr.
       value: 18
-      sprite: {fileID: 21300000, guid: c060e83312776ff478b2dcb43995ec3a, type: 3}
+      sprite: {fileID: 21300000, guid: 71bf5d3320f2ec540b36764e5ad27aba, type: 3}
   - cardDataA:
       textOrImage: 1
       name: ham (schouder) Voor 1 snee (20 gr)
       value: 27
-      sprite: {fileID: 21300000, guid: 6bee85f301e18c245b5c82a71995eac9, type: 3}
+      sprite: {fileID: 21300000, guid: 85a523fcc838d10428bae7acfe9c3fe3, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: ham (schouder) Voor 1 snee (20 gr)
       value: 27
-      sprite: {fileID: 21300000, guid: 6bee85f301e18c245b5c82a71995eac9, type: 3}
+      sprite: {fileID: 21300000, guid: 85a523fcc838d10428bae7acfe9c3fe3, type: 3}
   - cardDataA:
       textOrImage: 1
       name: havermoutpap Bord
       value: 183
-      sprite: {fileID: 21300000, guid: 8c1adfc324d2bfe4a93b46e28991e9dd, type: 3}
+      sprite: {fileID: 21300000, guid: d9bcf961f5053324d846cd6237938019, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: havermoutpap Bord
       value: 183
-      sprite: {fileID: 21300000, guid: 8c1adfc324d2bfe4a93b46e28991e9dd, type: 3}
+      sprite: {fileID: 21300000, guid: d9bcf961f5053324d846cd6237938019, type: 3}
   - cardDataA:
       textOrImage: 1
       name: hotdog Stuk (30 gr)
       value: 60
-      sprite: {fileID: 21300000, guid: 72b7e273b687dd54eae9fd435016aafb, type: 3}
+      sprite: {fileID: 21300000, guid: 9abbca5f27338b341abb16fca0b6be4b, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: hotdog Stuk (30 gr)
       value: 60
-      sprite: {fileID: 21300000, guid: 72b7e273b687dd54eae9fd435016aafb, type: 3}
+      sprite: {fileID: 21300000, guid: 9abbca5f27338b341abb16fca0b6be4b, type: 3}
   - cardDataA:
       textOrImage: 1
       name: huzarenslaatje Voor 1 snee (30 gr)
       value: 44
-      sprite: {fileID: 21300000, guid: d1dd20f0f3b3b574c963635c92a23367, type: 3}
+      sprite: {fileID: 21300000, guid: cd3e50d7b2d228347afb1aeda522c1db, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: huzarenslaatje Voor 1 snee (30 gr)
       value: 44
-      sprite: {fileID: 21300000, guid: d1dd20f0f3b3b574c963635c92a23367, type: 3}
+      sprite: {fileID: 21300000, guid: cd3e50d7b2d228347afb1aeda522c1db, type: 3}
   - cardDataA:
       textOrImage: 1
       name: jam (marmelade) Voor 1 sneel (15 gr)
       value: 37
-      sprite: {fileID: 21300000, guid: a6ca2c707ffc9c14f8e5fc6f1a410511, type: 3}
+      sprite: {fileID: 21300000, guid: 29e4cd6fbc63ce14e8d7d8549b193cb7, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: jam (marmelade) Voor 1 sneel (15 gr)
       value: 37
-      sprite: {fileID: 21300000, guid: a6ca2c707ffc9c14f8e5fc6f1a410511, type: 3}
+      sprite: {fileID: 21300000, guid: 29e4cd6fbc63ce14e8d7d8549b193cb7, type: 3}
   - cardDataA:
       textOrImage: 1
       name: kaas (gouda) Voor 1 snee (20 gr)
       value: 73
-      sprite: {fileID: 21300000, guid: 37441c76851a34142819c9b8c50e36e8, type: 3}
+      sprite: {fileID: 21300000, guid: 2269b3b204068bb48973763356513102, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: kaas (gouda) Voor 1 snee (20 gr)
       value: 73
-      sprite: {fileID: 21300000, guid: 37441c76851a34142819c9b8c50e36e8, type: 3}
+      sprite: {fileID: 21300000, guid: 2269b3b204068bb48973763356513102, type: 3}
   - cardDataA:
       textOrImage: 1
       name: "knackebr\xF6d Wasa 1 stuk (10 gr)"
       value: 37
-      sprite: {fileID: 21300000, guid: 7696b3d4087d46347b6cb710d10db065, type: 3}
+      sprite: {fileID: 21300000, guid: e356512ce947b7b48a5d9281e6cc30f4, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: "knackebr\xF6d Wasa 1 stuk (10 gr)"
       value: 37
-      sprite: {fileID: 21300000, guid: 7696b3d4087d46347b6cb710d10db065, type: 3}
+      sprite: {fileID: 21300000, guid: e356512ce947b7b48a5d9281e6cc30f4, type: 3}
   - cardDataA:
       textOrImage: 1
       name: knakworst 1 stuk (10 gr)
       value: 20
-      sprite: {fileID: 21300000, guid: 2fbcf107a4db27443b0001f23181cd77, type: 3}
+      sprite: {fileID: 21300000, guid: 438c007826b706c41ad3135b44bf8200, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: knakworst 1 stuk (10 gr)
       value: 20
-      sprite: {fileID: 21300000, guid: 2fbcf107a4db27443b0001f23181cd77, type: 3}
+      sprite: {fileID: 21300000, guid: 438c007826b706c41ad3135b44bf8200, type: 3}
   - cardDataA:
       textOrImage: 1
       name: kokosbrood 1 plak (25 gr)
       value: 107
-      sprite: {fileID: 21300000, guid: 5c15917655013954d971ac4e9ea51af0, type: 3}
+      sprite: {fileID: 21300000, guid: d0357f65e03d13246a3ba101e9b1bdb2, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: kokosbrood 1 plak (25 gr)
       value: 107
-      sprite: {fileID: 21300000, guid: 5c15917655013954d971ac4e9ea51af0, type: 3}
+      sprite: {fileID: 21300000, guid: d0357f65e03d13246a3ba101e9b1bdb2, type: 3}
   - cardDataA:
       textOrImage: 1
       name: krentenbol 1 stuk (50 gr)
       value: 134
-      sprite: {fileID: 21300000, guid: 0a55507744d040040ab273cfccafb938, type: 3}
+      sprite: {fileID: 21300000, guid: c54476a6447546c43ba94ebe90bbedaa, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: krentenbol 1 stuk (50 gr)
       value: 134
-      sprite: {fileID: 21300000, guid: 0a55507744d040040ab273cfccafb938, type: 3}
+      sprite: {fileID: 21300000, guid: c54476a6447546c43ba94ebe90bbedaa, type: 3}
   - cardDataA:
       textOrImage: 1
       name: kroket 1 stuk (65 gr)
       value: 153
-      sprite: {fileID: 21300000, guid: c60a007773c1f4a4eac28e71c668afd0, type: 3}
+      sprite: {fileID: 21300000, guid: f089102eb92a55a44ae1be4dcf3b22ae, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: kroket 1 stuk (65 gr)
       value: 153
-      sprite: {fileID: 21300000, guid: c60a007773c1f4a4eac28e71c668afd0, type: 3}
+      sprite: {fileID: 21300000, guid: f089102eb92a55a44ae1be4dcf3b22ae, type: 3}
   - cardDataA:
       textOrImage: 1
       name: kwark (vol) Eetlepel (20 gr)
       value: 24
-      sprite: {fileID: 21300000, guid: b5d7b176dca745047aef673f62b8f6bc, type: 3}
+      sprite: {fileID: 21300000, guid: e496f625f6b8de84aa1d7614bc8b4a14, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: kwark (vol) Eetlepel (20 gr)
       value: 24
-      sprite: {fileID: 21300000, guid: b5d7b176dca745047aef673f62b8f6bc, type: 3}
+      sprite: {fileID: 21300000, guid: e496f625f6b8de84aa1d7614bc8b4a14, type: 3}
   - cardDataA:
       textOrImage: 1
       name: leverworst Voor 1 snee (20 gr)
       value: 57
-      sprite: {fileID: 21300000, guid: 940dd4bcff278f74393ff974cc3db741, type: 3}
+      sprite: {fileID: 21300000, guid: c51f8bb8ff24ff844a658289daeb7459, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: leverworst Voor 1 snee (20 gr)
       value: 57
-      sprite: {fileID: 21300000, guid: 940dd4bcff278f74393ff974cc3db741, type: 3}
+      sprite: {fileID: 21300000, guid: c51f8bb8ff24ff844a658289daeb7459, type: 3}
   - cardDataA:
       textOrImage: 1
       name: matse 1 stuk (10 gr)
       value: 38
-      sprite: {fileID: 21300000, guid: a529f73206a1a0a4ea3b0296238d9775, type: 3}
+      sprite: {fileID: 21300000, guid: 74a7865be243f2d47b9117d08833cf82, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: matse 1 stuk (10 gr)
       value: 38
-      sprite: {fileID: 21300000, guid: a529f73206a1a0a4ea3b0296238d9775, type: 3}
+      sprite: {fileID: 21300000, guid: 74a7865be243f2d47b9117d08833cf82, type: 3}
   - cardDataA:
       textOrImage: 1
       name: muesli Eetlepel (10 gr)
       value: 37
-      sprite: {fileID: 21300000, guid: cfa22868513a509469f2196e2c25ea3e, type: 3}
+      sprite: {fileID: 21300000, guid: f6235dde83594eb4da89310ca3eff583, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: muesli Eetlepel (10 gr)
       value: 37
-      sprite: {fileID: 21300000, guid: cfa22868513a509469f2196e2c25ea3e, type: 3}
+      sprite: {fileID: 21300000, guid: f6235dde83594eb4da89310ca3eff583, type: 3}
   - cardDataA:
       textOrImage: 1
       name: ontbijtkoek Plak (25 gr)
       value: 78
-      sprite: {fileID: 21300000, guid: 245d3dcc0a619fa48b69bbfe5c063ee7, type: 3}
+      sprite: {fileID: 21300000, guid: de13616dc2ed43e449ce2b7d8e9b5403, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: ontbijtkoek Plak (25 gr)
       value: 78
-      sprite: {fileID: 21300000, guid: 245d3dcc0a619fa48b69bbfe5c063ee7, type: 3}
+      sprite: {fileID: 21300000, guid: de13616dc2ed43e449ce2b7d8e9b5403, type: 3}
   - cardDataA:
       textOrImage: 1
       name: ontbijtspek (beleg) Plak (10 gr)
       value: 31
-      sprite: {fileID: 21300000, guid: f56cf732031990347bb4d58e1b326359, type: 3}
+      sprite: {fileID: 21300000, guid: e2861247d8da9d74ea8c4d699f0e9d1a, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: ontbijtspek (beleg) Plak (10 gr)
       value: 31
-      sprite: {fileID: 21300000, guid: f56cf732031990347bb4d58e1b326359, type: 3}
+      sprite: {fileID: 21300000, guid: e2861247d8da9d74ea8c4d699f0e9d1a, type: 3}
   - cardDataA:
       textOrImage: 1
       name: pindakaas Voor 1 snee (15 gr)
       value: 101
-      sprite: {fileID: 21300000, guid: 244a5d9ee95b10b43b827bac178f1d2f, type: 3}
+      sprite: {fileID: 21300000, guid: 86c020c46277d3144a253c49c2f5b69f, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: pindakaas Voor 1 snee (15 gr)
       value: 101
-      sprite: {fileID: 21300000, guid: 244a5d9ee95b10b43b827bac178f1d2f, type: 3}
+      sprite: {fileID: 21300000, guid: 86c020c46277d3144a253c49c2f5b69f, type: 3}
   - cardDataA:
       textOrImage: 1
       name: roggebrood (donker) Snee (45 gr)
       value: 87
-      sprite: {fileID: 21300000, guid: 005b4c3716418fd4586e71bdc4d8e9dd, type: 3}
+      sprite: {fileID: 21300000, guid: b95ac53f220727a43b9270cba9159247, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: roggebrood (donker) Snee (45 gr)
       value: 87
-      sprite: {fileID: 21300000, guid: 005b4c3716418fd4586e71bdc4d8e9dd, type: 3}
+      sprite: {fileID: 21300000, guid: b95ac53f220727a43b9270cba9159247, type: 3}
   - cardDataA:
       textOrImage: 1
       name: salami (beleg) Voor 1 snee (15 gr)
       value: 59
-      sprite: {fileID: 21300000, guid: 77167b95d093ca94795b9a0079d654cf, type: 3}
+      sprite: {fileID: 21300000, guid: 1086184488e503547bbe569c47c35ae5, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: salami (beleg) Voor 1 snee (15 gr)
       value: 59
-      sprite: {fileID: 21300000, guid: 77167b95d093ca94795b9a0079d654cf, type: 3}
+      sprite: {fileID: 21300000, guid: 1086184488e503547bbe569c47c35ae5, type: 3}
   - cardDataA:
       textOrImage: 1
       name: Saucijzenbroodje 1 stuk (75 gr)
       value: 249
-      sprite: {fileID: 21300000, guid: 281bcfd4cd5715f4d880fd6e4be0ca6f, type: 3}
+      sprite: {fileID: 21300000, guid: 76b088a703fe2be4aa535fa4e0595c79, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: Saucijzenbroodje 1 stuk (75 gr)
       value: 249
-      sprite: {fileID: 21300000, guid: 281bcfd4cd5715f4d880fd6e4be0ca6f, type: 3}
+      sprite: {fileID: 21300000, guid: 76b088a703fe2be4aa535fa4e0595c79, type: 3}
   - cardDataA:
       textOrImage: 1
       name: smeerkaas (40+) Voor 1 snee (15 gr)
       value: 34
-      sprite: {fileID: 21300000, guid: f3917d911a372244e9edae7f8650c543, type: 3}
+      sprite: {fileID: 21300000, guid: aafbb1f0033596a4ca439f9b528b3dc0, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: smeerkaas (40+) Voor 1 snee (15 gr)
       value: 34
-      sprite: {fileID: 21300000, guid: f3917d911a372244e9edae7f8650c543, type: 3}
+      sprite: {fileID: 21300000, guid: aafbb1f0033596a4ca439f9b528b3dc0, type: 3}
   - cardDataA:
       textOrImage: 1
       name: soep (niet gebonden) Kop (250 gr)
       value: 23
-      sprite: {fileID: 21300000, guid: 3e330695ffeaa9e42b378c2c219b871e, type: 3}
+      sprite: {fileID: 21300000, guid: fdab9b6089fbe1b47a761ade37576a5c, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: soep (niet gebonden) Kop (250 gr)
       value: 23
-      sprite: {fileID: 21300000, guid: 3e330695ffeaa9e42b378c2c219b871e, type: 3}
+      sprite: {fileID: 21300000, guid: fdab9b6089fbe1b47a761ade37576a5c, type: 3}
   - cardDataA:
       textOrImage: 1
       name: stokbrood Heel (300 gr)
       value: 807
-      sprite: {fileID: 21300000, guid: 48bc2ebc727835047ba07a26f3420765, type: 3}
+      sprite: {fileID: 21300000, guid: 941356c0d922b7c47aef1afe476d68a2, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: stokbrood Heel (300 gr)
       value: 807
-      sprite: {fileID: 21300000, guid: 48bc2ebc727835047ba07a26f3420765, type: 3}
+      sprite: {fileID: 21300000, guid: 941356c0d922b7c47aef1afe476d68a2, type: 3}
   - cardDataA:
       textOrImage: 1
       name: stroop Voor 1 snee (15 gr)
       value: 45
-      sprite: {fileID: 21300000, guid: ed0472123f4c9274ebf0281a3f2e8a38, type: 3}
+      sprite: {fileID: 21300000, guid: d8f339c128c8bc24ab76ded10b9d21b9, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: stroop Voor 1 snee (15 gr)
       value: 45
-      sprite: {fileID: 21300000, guid: ed0472123f4c9274ebf0281a3f2e8a38, type: 3}
+      sprite: {fileID: 21300000, guid: d8f339c128c8bc24ab76ded10b9d21b9, type: 3}
   - cardDataA:
       textOrImage: 1
       name: vruchtenhagelslag Voor 1 snee (15 gr)
       value: 59
-      sprite: {fileID: 21300000, guid: 8c3ea9093b936174cb56ab88ddf13e83, type: 3}
+      sprite: {fileID: 21300000, guid: 546126e3b8df4a840ab83af684d01b38, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: vruchtenhagelslag Voor 1 snee (15 gr)
       value: 59
-      sprite: {fileID: 21300000, guid: 8c3ea9093b936174cb56ab88ddf13e83, type: 3}
+      sprite: {fileID: 21300000, guid: 546126e3b8df4a840ab83af684d01b38, type: 3}
   - cardDataA:
       textOrImage: 1
       name: worstenbroodje Stuk(75 gr)
       value: 287
-      sprite: {fileID: 21300000, guid: 0c24971a22e15cc4bb0fbd6c9bdd69c4, type: 3}
+      sprite: {fileID: 21300000, guid: 02efc74319d5ba846a209556875217b1, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: worstenbroodje Stuk(75 gr)
       value: 287
-      sprite: {fileID: 21300000, guid: 0c24971a22e15cc4bb0fbd6c9bdd69c4, type: 3}
+      sprite: {fileID: 21300000, guid: 02efc74319d5ba846a209556875217b1, type: 3}
   - cardDataA:
       textOrImage: 1
       name: yoghurt (halfvol) Eetlepel (15 gr)
       value: 8
-      sprite: {fileID: 21300000, guid: 86332ae3da56e3c48ad9c00fe4dd5fe3, type: 3}
+      sprite: {fileID: 21300000, guid: b08e49f6e1e3f1a468bf9cebb32386ba, type: 3}
     cardDataB:
-      textOrImage: 2
+      textOrImage: 3
       name: yoghurt (halfvol) Eetlepel (15 gr)
       value: 8
-      sprite: {fileID: 21300000, guid: 86332ae3da56e3c48ad9c00fe4dd5fe3, type: 3}
+      sprite: {fileID: 21300000, guid: b08e49f6e1e3f1a468bf9cebb32386ba, type: 3}
   sourceCsv: D:\Data\Desktop\calorie stuff\Ontbijt.csv
   targetImageAssetFolder: Assets/Images/Ontbijt/

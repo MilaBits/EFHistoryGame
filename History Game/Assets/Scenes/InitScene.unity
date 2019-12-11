@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -188,12 +187,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7751319791257838341, guid: d21d40e053a0ceb499904da364436a28,
+    - target: {fileID: 7580370671467913579, guid: d21d40e053a0ceb499904da364436a28,
         type: 3}
-      propertyPath: gamePreset
-      value: 
-      objectReference: {fileID: 11400000, guid: 378e72f9ac659a94ab6680e862cc035f,
-        type: 2}
+      propertyPath: UninteractableAreaSize
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d21d40e053a0ceb499904da364436a28, type: 3}
 --- !u!1 &1040082428 stripped

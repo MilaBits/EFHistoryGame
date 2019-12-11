@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ArrayOfGlobalGameSetting xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <GlobalGameSetting>
+    <Label>Theme</Label>
+    <Value>Breakfast</Value>
+    <PossibleValues>
+      <string>Breakfast</string>
+      <string>Dinner</string>
+      <string>History</string>
+    </PossibleValues>
+    <Default>Breakfast</Default>
+  </GlobalGameSetting>
+</ArrayOfGlobalGameSetting>
