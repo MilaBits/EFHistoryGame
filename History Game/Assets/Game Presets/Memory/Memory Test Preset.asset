@@ -19,40 +19,40 @@ MonoBehaviour:
       textOrImage: 3
       name: Jagers en Boeren
       value: -3000
-      sprite: {fileID: 0}
+      sprite: {fileID: 21300000, guid: 7afc7290e5f219d46a15b5eed90fe910, type: 3}
     cardDataB:
       textOrImage: 1
-      name: 
+      name: Hunnebed
       value: -3000
       sprite: {fileID: 21300000, guid: 7afc7290e5f219d46a15b5eed90fe910, type: 3}
   - cardDataA:
       textOrImage: 3
       name: Romeinse Limes
       value: 40
-      sprite: {fileID: 0}
+      sprite: {fileID: 21300000, guid: 8e1d4f33bcbb0f8438dfb1af9481cbc1, type: 3}
     cardDataB:
       textOrImage: 1
-      name: 
+      name: Romeinse Limes
       value: 40
       sprite: {fileID: 21300000, guid: 8e1d4f33bcbb0f8438dfb1af9481cbc1, type: 3}
   - cardDataA:
       textOrImage: 3
-      name: 
+      name: Kasteel
       value: 796
       sprite: {fileID: 21300000, guid: f145273511413d747a4af830097ab30f, type: 3}
     cardDataB:
       textOrImage: 1
-      name: 
-      value: 750
+      name: Kasteel
+      value: 796
       sprite: {fileID: 21300000, guid: f145273511413d747a4af830097ab30f, type: 3}
   - cardDataA:
       textOrImage: 3
-      name: 
+      name: Middeleeuwse stad
       value: 1250
       sprite: {fileID: 21300000, guid: 51ea7be0876547642b03df841b771e87, type: 3}
     cardDataB:
       textOrImage: 1
-      name: 
+      name: Middeleeuwse Stad
       value: 1250
       sprite: {fileID: 21300000, guid: 51ea7be0876547642b03df841b771e87, type: 3}
   - cardDataA:
