@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1292733122895889457}
   - component: {fileID: 1487633214657388522}
   - component: {fileID: 7751319791257838341}
+  - component: {fileID: 1040082429}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -138,12 +139,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SettingToMake:
   - Label: Theme
-    Value: Breakfast
+    Value: Drinks
     PossibleValues:
     - Breakfast
     - Dinner
+    - Veg & Fruit
+    - Baked Goods
+    - Drinks
+    - Snacks
     - History
-    Default: Breakfast
+    Default: Dinner
 --- !u!114 &7751319791257838341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebc138e5f084acabc42ad775c82633d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePreset: {fileID: 11400000, guid: 378e72f9ac659a94ab6680e862cc035f, type: 2}
+  gamePreset: {fileID: 11400000, guid: 6c5454a373eb76146af528f317df5611, type: 2}
   themeStrings:
   - name: Breakfast
     preset: {fileID: 11400000, guid: bddb7c42d874a5940bbc5d04ed44bd66, type: 2}
@@ -164,3 +169,25 @@ MonoBehaviour:
     preset: {fileID: 11400000, guid: 378e72f9ac659a94ab6680e862cc035f, type: 2}
   - name: History
     preset: {fileID: 11400000, guid: e084add0565180644bf612bac4b90589, type: 2}
+  - name: Veg & Fruit
+    preset: {fileID: 11400000, guid: be0bebec39b9e824aad263aebf081a0d, type: 2}
+  - name: Drinks
+    preset: {fileID: 11400000, guid: 6c5454a373eb76146af528f317df5611, type: 2}
+  - name: Snacks
+    preset: {fileID: 11400000, guid: b32b6205c71fb6f4982ec4ec440aebe3, type: 2}
+  - name: Baked Goods
+    preset: {fileID: 11400000, guid: ac06c2473fa05cf4c98b19f8127befd0, type: 2}
+--- !u!114 &1040082429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580370671467913580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4a8ac1e8392b041ae68bd39bf430ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSwitch: 1
+  scene: TimelineScene

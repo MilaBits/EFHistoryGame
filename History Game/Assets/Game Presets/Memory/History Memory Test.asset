@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2e6a6a497724062b37ec06841eda72c, type: 3}
-  m_Name: Memory Test Preset
+  m_Name: History Memory Test
   m_EditorClassIdentifier: 
   description: Koppel de jaren
   numberOfMatches: 6

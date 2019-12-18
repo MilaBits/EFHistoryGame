@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SplashScreen : MonoBehaviour
 {
 	[SerializeField]
-	private string nextScene;
+	private string nextScene = default;
 	[Space]
 	[SerializeField]
 	private float splashDuration = 5f;
@@ -14,7 +14,7 @@ public class SplashScreen : MonoBehaviour
 	private float fadeDuration = 1f;
 	[Space]
 	[SerializeField]
-	private Image targetImage;
+	private Image targetImage = default;
 
 	private void Start()
 	{

@@ -15,6 +15,9 @@ namespace Timeline
 		[SerializeField]
 		private Color highlightColor;
 
+		private Transform originalParent;
+		private Vector3 originalPosition;
+
 		public void Move() =>
 			StartCoroutine(MoveTransform(transform.position, target.transform.position, .5f,
 										 new Vector3(0.2f, 0.2f, 1)));
@@ -33,8 +36,35 @@ namespace Timeline
 			image.color = end;
 		}
 
+		public void MoveBack()
+		{
+			StartCoroutine(MoveBack(.5f));
+		}
+
+		private IEnumerator MoveBack(float duration)
+		{
+			Vector3 startPos   = transform.position;
+			Vector3 startScale = transform.localScale;
+
+			for (float elapsed = 0; elapsed < duration; elapsed += Time.deltaTime)
+			{
+				float progress = elapsed / duration;
+				transform.position   = Vector3.Lerp(startPos, originalPosition, progress);
+				transform.localScale = Vector3.Lerp(startScale, Vector3.one, progress);
+				yield return null;
+			}
+
+			transform.position   = originalPosition;
+			transform.localScale = Vector3.one;
+			transform.SetParent(originalParent, false);
+			ready = true;
+		}
+
 		private IEnumerator MoveTransform(Vector3 startPos, Vector3 endPos, float time, Vector3 targetScale)
 		{
+			originalParent   = transform.parent;
+			originalPosition = transform.position;
+
 			Vector3 startScale = transform.localScale;
 			transform.SetParent(GetComponentInParent<Canvas>().transform);
 

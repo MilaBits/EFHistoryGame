@@ -1,0 +1,279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e6a6a497724062b37ec06841eda72c, type: 3}
+  m_Name: Koek - Gebak
+  m_EditorClassIdentifier: 
+  description: "Raad de Calorie\xEBn"
+  numberOfMatches: 6
+  matches:
+  - cardDataA:
+      textOrImage: 1
+      name: Amandelbroodje Per stuk 60 gram
+      value: 271
+      sprite: {fileID: 21300000, guid: 2886d8b4b906a794d9f40bed6a082532, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: Amandelbroodje Per stuk 60 gram
+      value: 271
+      sprite: {fileID: 21300000, guid: 2886d8b4b906a794d9f40bed6a082532, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: appeltaart Per punt 100 gram
+      value: 286
+      sprite: {fileID: 21300000, guid: 7dd5129eb099d9245a2592e93816fc78, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: appeltaart Per punt 100 gram
+      value: 286
+      sprite: {fileID: 21300000, guid: 7dd5129eb099d9245a2592e93816fc78, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: baklava Per stuk 75 gram
+      value: 346
+      sprite: {fileID: 21300000, guid: 1823777a5d6c4604099166e3919cf147, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: baklava Per stuk 75 gram
+      value: 346
+      sprite: {fileID: 21300000, guid: 1823777a5d6c4604099166e3919cf147, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: banketstaaf Per stuk 50 gram
+      value: 226
+      sprite: {fileID: 21300000, guid: 22ea567a9251ca94ca71bca0791df12a, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: banketstaaf Per stuk 50 gram
+      value: 226
+      sprite: {fileID: 21300000, guid: 22ea567a9251ca94ca71bca0791df12a, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: biscuitje  Per stuk 10 gram
+      value: 44
+      sprite: {fileID: 21300000, guid: a30aca28c4bf99f4e9a84cd35558be42, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: biscuitje  Per stuk 10 gram
+      value: 44
+      sprite: {fileID: 21300000, guid: a30aca28c4bf99f4e9a84cd35558be42, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: bokkepoot Per stuk 15 gram
+      value: 66
+      sprite: {fileID: 21300000, guid: ada1c3e0e1633a143b629b7fc96a9596, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: bokkepoot Per stuk 15 gram
+      value: 66
+      sprite: {fileID: 21300000, guid: ada1c3e0e1633a143b629b7fc96a9596, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Bossche Bol Per stuk 75 gram
+      value: 253
+      sprite: {fileID: 21300000, guid: 0fefc7df97a86cd4b849e55c5bc23c03, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: Bossche Bol Per stuk 75 gram
+      value: 253
+      sprite: {fileID: 21300000, guid: 0fefc7df97a86cd4b849e55c5bc23c03, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: boterkoek Per stuk 30 gram
+      value: 133
+      sprite: {fileID: 21300000, guid: 9427144e4c699404fbc93a16242a72b0, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: boterkoek Per stuk 30 gram
+      value: 133
+      sprite: {fileID: 21300000, guid: 9427144e4c699404fbc93a16242a72b0, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: cake Per plak 30 gram
+      value: 126
+      sprite: {fileID: 21300000, guid: 5d5f695a3b415fe40b625ea992de8efb, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: cake Per plak 30 gram
+      value: 126
+      sprite: {fileID: 21300000, guid: 5d5f695a3b415fe40b625ea992de8efb, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: chocoladebiscuit Per stuk 10 gram
+      value: 47
+      sprite: {fileID: 21300000, guid: 0a57ee55df3b3cd46b10031a46f39fd0, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: chocoladebiscuit Per stuk 10 gram
+      value: 47
+      sprite: {fileID: 21300000, guid: 0a57ee55df3b3cd46b10031a46f39fd0, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: donut Per stuk 55 gram
+      value: 197
+      sprite: {fileID: 21300000, guid: d9eb87b1c464d9149a1758508b7b8b23, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: donut Per stuk 55 gram
+      value: 197
+      sprite: {fileID: 21300000, guid: d9eb87b1c464d9149a1758508b7b8b23, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Eierkoek Per stuk 30 gram
+      value: 85
+      sprite: {fileID: 21300000, guid: fa842dabe287b774081e2b2fee4eec1f, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: Eierkoek Per stuk 30 gram
+      value: 85
+      sprite: {fileID: 21300000, guid: fa842dabe287b774081e2b2fee4eec1f, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: gevulde koek Per stuk 60 gram
+      value: 262
+      sprite: {fileID: 21300000, guid: 04ec872a105f90d4f81bd4e4114947b6, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: gevulde koek Per stuk 60 gram
+      value: 262
+      sprite: {fileID: 21300000, guid: 04ec872a105f90d4f81bd4e4114947b6, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: gevulde speculaas  Per stuk 40 gram
+      value: 192
+      sprite: {fileID: 21300000, guid: 720f9947e83bad14b8804a59ab8e1aef, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: gevulde speculaas  Per stuk 40 gram
+      value: 192
+      sprite: {fileID: 21300000, guid: 720f9947e83bad14b8804a59ab8e1aef, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: kano Per stuk 45 gram
+      value: 182
+      sprite: {fileID: 21300000, guid: b9588a5634297d94499c043dc437279c, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: kano Per stuk 45 gram
+      value: 182
+      sprite: {fileID: 21300000, guid: b9588a5634297d94499c043dc437279c, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: Lange vingers Per stuk 5 gram
+      value: 21
+      sprite: {fileID: 21300000, guid: 77c9587dbdc4162439ed24871ce88d12, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: Lange vingers Per stuk 5 gram
+      value: 21
+      sprite: {fileID: 21300000, guid: 77c9587dbdc4162439ed24871ce88d12, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: mergpijpje Per stuk 85 gram
+      value: 389
+      sprite: {fileID: 21300000, guid: b64bec69bbf6b824b8b6288e229dddd2, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: mergpijpje Per stuk 85 gram
+      value: 389
+      sprite: {fileID: 21300000, guid: b64bec69bbf6b824b8b6288e229dddd2, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: mokkataart Per punt 100 gram
+      value: 396
+      sprite: {fileID: 21300000, guid: 3190509c3986d5d459190b9451b1116b, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: mokkataart Per punt 100 gram
+      value: 396
+      sprite: {fileID: 21300000, guid: 3190509c3986d5d459190b9451b1116b, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: pennywafel Per stuk 15 gram
+      value: 81
+      sprite: {fileID: 21300000, guid: 9b81ea72af6238041a12ddffadf36e63, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: pennywafel Per stuk 15 gram
+      value: 81
+      sprite: {fileID: 21300000, guid: 9b81ea72af6238041a12ddffadf36e63, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: slagroomtaart Per punt 100 gram
+      value: 316
+      sprite: {fileID: 21300000, guid: ba90a5ffa3a0b074f8122b0b7d572ac5, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: slagroomtaart Per punt 100 gram
+      value: 316
+      sprite: {fileID: 21300000, guid: ba90a5ffa3a0b074f8122b0b7d572ac5, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: speculaas Per stuk 7 gram
+      value: 33
+      sprite: {fileID: 21300000, guid: 0be1672030a64b14bb108bf3e32bc371, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: speculaas Per stuk 7 gram
+      value: 33
+      sprite: {fileID: 21300000, guid: 0be1672030a64b14bb108bf3e32bc371, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: sprits Per stuk 25 gram
+      value: 132
+      sprite: {fileID: 21300000, guid: f371f2528bac81348b73579be1577301, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: sprits Per stuk 25 gram
+      value: 132
+      sprite: {fileID: 21300000, guid: f371f2528bac81348b73579be1577301, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: stroopwafel Per stuk 30 gram
+      value: 142
+      sprite: {fileID: 21300000, guid: 30449e62d2626c344a0f518bf30f6e39, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: stroopwafel Per stuk 30 gram
+      value: 142
+      sprite: {fileID: 21300000, guid: 30449e62d2626c344a0f518bf30f6e39, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: tompouce Per stuk 100 gram
+      value: 288
+      sprite: {fileID: 21300000, guid: 023840dff3a47394bb414552629365a0, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: tompouce Per stuk 100 gram
+      value: 288
+      sprite: {fileID: 21300000, guid: 023840dff3a47394bb414552629365a0, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: volkorenbiscuit Per stuk 10 gram
+      value: 46
+      sprite: {fileID: 21300000, guid: 6c90dcc261815ff44bfd804969b503d9, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: volkorenbiscuit Per stuk 10 gram
+      value: 46
+      sprite: {fileID: 21300000, guid: 6c90dcc261815ff44bfd804969b503d9, type: 3}
+  - cardDataA:
+      textOrImage: 1
+      name: vruchtenvlaai Per Punt
+      value: 229
+      sprite: {fileID: 21300000, guid: 428c34c0dc6c60147a7ea52bcfb29a1f, type: 3}
+    cardDataB:
+      textOrImage: 3
+      name: vruchtenvlaai Per Punt
+      value: 229
+      sprite: {fileID: 21300000, guid: 428c34c0dc6c60147a7ea52bcfb29a1f, type: 3}
+  sourceCsv: D:\Data\Desktop\calorie stuff\Koek - Gebak.csv
+  targetImageAssetFolder: Assets/Images/Koek - Gebak/

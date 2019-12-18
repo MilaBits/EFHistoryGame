@@ -2,12 +2,16 @@
 <ArrayOfGlobalGameSetting xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <GlobalGameSetting>
     <Label>Theme</Label>
-    <Value>Breakfast</Value>
+    <Value>Baked Goods</Value>
     <PossibleValues>
       <string>Breakfast</string>
       <string>Dinner</string>
+      <string>Veg &amp; Fruit</string>
+      <string>Baked Goods</string>
+      <string>Drinks</string>
+      <string>Snacks</string>
       <string>History</string>
     </PossibleValues>
-    <Default>Breakfast</Default>
+    <Default>Dinner</Default>
   </GlobalGameSetting>
 </ArrayOfGlobalGameSetting>

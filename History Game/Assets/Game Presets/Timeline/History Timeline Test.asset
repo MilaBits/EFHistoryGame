@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8b13b3025f643c185d2ab17b423a952, type: 3}
-  m_Name: Timeline Test Preset
+  m_Name: History Timeline Test
   m_EditorClassIdentifier: 
   description: Zet de afbeeldingen op de tijdlijn
   numberOfItems: 8

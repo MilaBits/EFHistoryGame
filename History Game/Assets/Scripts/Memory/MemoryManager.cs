@@ -56,7 +56,7 @@ namespace Memory
 				{
 					foreach (MemoryCard activeCard in _activeCards)
 					{
-						activeCard.Hide(true, .5f);
+						activeCard.Hide();
 					}
 				}
 

@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace Timeline
@@ -15,7 +16,7 @@ namespace Timeline
 		private TimeCard _activeCard;
 
 		[SerializeField]
-		private float allowedInaccuracy;
+		private float allowedInaccuracy = default;
 
 		[Header("Scene References")]
 		[SerializeField]
@@ -38,22 +39,21 @@ namespace Timeline
 			if (_activeCard) _activeCard.Deactivate();
 
 			List<TimeCard> availableCards = _cards.Where(x => !x.done).ToList();
-			if (availableCards.Count > 0)
+			if (availableCards.Count < 1)
 			{
-				availableCards = availableCards.Where(x => x.ready).ToList();
-				if (availableCards.Count > 0)
-				{
-					_activeCard = availableCards[Random.Range(0, availableCards.Count)];
-					_activeCard.Activate();
-				}
-				else
-				{
-					StartCoroutine(CheckCards(.75f));
-				}
+				gameDone.Invoke();
+				return;
+			}
+
+			if (cardContainer.childCount > 0)
+			{
+				TimeCard nextCard = cardContainer.GetChild(0).GetComponent<TimeCard>();
+				_activeCard = nextCard;
+				_activeCard.Activate();
 			}
 			else
 			{
-				gameDone.Invoke();
+				StartCoroutine(CheckCards(.75f));
 			}
 		}
 
@@ -99,9 +99,8 @@ namespace Timeline
 
 				if (distance > allowedInaccuracy)
 				{
-					card.transform.localScale = Vector3.one;
-					card.transform.SetParent(cardContainer);
-					card.ready = true;
+					card.MoveBack();
+					DelayedResetLayout(1f);
 				}
 				else
 				{
@@ -111,6 +110,12 @@ namespace Timeline
 			}
 
 			ActivateCard();
+		}
+
+		private IEnumerator DelayedResetLayout(float delay)
+		{
+			yield return new WaitForSeconds(delay);
+			LayoutRebuilder.ForceRebuildLayoutImmediate(cardContainer);
 		}
 	}
 }

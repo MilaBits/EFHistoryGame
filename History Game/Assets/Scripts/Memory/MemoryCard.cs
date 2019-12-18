@@ -17,24 +17,18 @@ namespace Memory
 
 		private void Awake()
 		{
-			Hide(false, 0f);
+			Hide();
 			StartCoroutine(DelayedFlip(true, .5f, UnityEngine.Random.Range(.1f, 1f)));
 			interactable = true;
 		}
 
-		public void Reveal(bool animate)
+		public void Reveal()
 		{
-//			if (animate) StartCoroutine(Flip(true, .5f));
-//			else ToggleView(true);
-
 			Select(true);
 		}
 
-		public void Hide(bool animate, float delay)
+		public void Hide()
 		{
-//			if (animate) StartCoroutine(DelayedFlip(false, .5f, .75f));
-//			else ToggleView(false);
-
 			Select(false);
 		}
 
@@ -82,6 +76,30 @@ namespace Memory
 			transform.localScale = end;
 		}
 
+		private IEnumerator Bounce(float duration)
+		{
+			Vector3 startPos  = transform.position;
+			Vector3 targetPos = transform.position + Vector3.up * .1f;
+			float   halfTime  = duration / 2;
+
+			for (float elapsed = 0; elapsed < halfTime; elapsed += Time.deltaTime)
+			{
+				Vector3.Lerp(startPos, targetPos, elapsed / halfTime);
+				yield return null;
+			}
+
+			transform.position = targetPos;
+
+			for (float elapsed = 0; elapsed < halfTime; elapsed += Time.deltaTime)
+			{
+				transform.position = Vector3.Lerp(targetPos, startPos, elapsed / halfTime);
+
+				yield return null;
+			}
+
+			transform.position = startPos;
+		}
+
 		private void ToggleView(bool show)
 		{
 			switch (textOrImage)
@@ -108,7 +126,9 @@ namespace Memory
 		{
 			if (!interactable) return;
 
-			Reveal(true);
+			StartCoroutine(Bounce(.5f));
+
+			Reveal();
 			manager.CheckCards(this);
 		}
 

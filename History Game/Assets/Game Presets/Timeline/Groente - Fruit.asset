@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b13b3025f643c185d2ab17b423a952, type: 3}
+  m_Name: Groente - Fruit
+  m_EditorClassIdentifier: 
+  description: Zet de afbeeldingen op de tijdlijn
+  numberOfItems: 8
+  cards:
+  - textOrImage: 3
+    name: Aardbeien 1 stuk (20gr.)
+    value: 6
+    sprite: {fileID: 21300000, guid: b85c8ab243a43dd44a964b63edf46a90, type: 3}
+  - textOrImage: 3
+    name: Abrikoos 1 stuk (20gr.)
+    value: 9
+    sprite: {fileID: 21300000, guid: e531f8ebd28fe384ca11bab9d617533c, type: 3}
+  - textOrImage: 3
+    name: Ananas Schijf (100 gr.)
+    value: 57
+    sprite: {fileID: 21300000, guid: 5e10188b328a14c449c9a56638dbea80, type: 3}
+  - textOrImage: 3
+    name: Appel stuk
+    value: 81
+    sprite: {fileID: 21300000, guid: f978b30fc9dfb634483d160b5fec6d83, type: 3}
+  - textOrImage: 3
+    name: aubergine stuk
+    value: 58
+    sprite: {fileID: 21300000, guid: 7a05255804693144a8bf8ea082999c1a, type: 3}
+  - textOrImage: 3
+    name: avocado stuk
+    value: 258
+    sprite: {fileID: 21300000, guid: 10d665efe73b7d546a88e5a4173d1414, type: 3}
+  - textOrImage: 3
+    name: Banaan stuk
+    value: 124
+    sprite: {fileID: 21300000, guid: b108e5cb7835d8e4ea7133ac356bbe4b, type: 3}
+  - textOrImage: 3
+    name: bleekselderij Schaaltje (70 gr.)
+    value: 10
+    sprite: {fileID: 21300000, guid: 32e166e599819b447b1c2521890a1754, type: 3}
+  - textOrImage: 3
+    name: bloemkool Schaaltje (70 gr.)
+    value: 18
+    sprite: {fileID: 21300000, guid: ebcb20d03a9841945b019c2619a842d4, type: 3}
+  - textOrImage: 3
+    name: broccoli opscheplepel
+    value: 14
+    sprite: {fileID: 21300000, guid: a4d722444d92aea41a07f929ca9add9c, type: 3}
+  - textOrImage: 3
+    name: druiven Stuk (5 gr.)
+    value: 4
+    sprite: {fileID: 21300000, guid: 168127eb24454ca43bd4d9cab3a1d27e, type: 3}
+  - textOrImage: 3
+    name: grapefruit stuk
+    value: 56
+    sprite: {fileID: 21300000, guid: 4d7bbee660fb5e74eac0ab71818933a9, type: 3}
+  - textOrImage: 3
+    name: komkommer Schaaltje (115 gr.)
+    value: 15
+    sprite: {fileID: 21300000, guid: 7fd64d0fcef09c948a4cc401184c1ccb, type: 3}
+  - textOrImage: 3
+    name: Mandarijn stuk
+    value: 15
+    sprite: {fileID: 21300000, guid: 1fd908ea7936e9d46808bdbce0a7ff69, type: 3}
+  - textOrImage: 3
+    name: paprika (rood) stuk
+    value: 19
+    sprite: {fileID: 21300000, guid: 6197b6918efb28f409f453beea20aac8, type: 3}
+  - textOrImage: 3
+    name: 'Peer Stuk  '
+    value: 83
+    sprite: {fileID: 21300000, guid: fbf08483cbc0a904ea12cafc9a3f734b, type: 3}
+  - textOrImage: 3
+    name: radijsjes stuk
+    value: 2
+    sprite: {fileID: 21300000, guid: 13027b5690bccb243a524097ef40e1ea, type: 3}
+  - textOrImage: 3
+    name: Sinaasappel stuk
+    value: 61
+    sprite: {fileID: 21300000, guid: 29bbbdc90e76ef24faf83d0bf171c51b, type: 3}
+  - textOrImage: 3
+    name: sla Schaaltje (45 gr.)
+    value: 7
+    sprite: {fileID: 21300000, guid: 5b497434827747a4ebe395d6b2bb84dc, type: 3}
+  - textOrImage: 3
+    name: tomaten Stuk
+    value: 14
+    sprite: {fileID: 21300000, guid: 10968bd9885d9a74c832882310e1382d, type: 3}
+  - textOrImage: 3
+    name: wortelen (vers) Stuk (20 gr.)
+    value: 7
+    sprite: {fileID: 21300000, guid: 35f06764518215649a62dbbd55c397c1, type: 3}
+  timeRanges:
+  - start: 0
+    end: 50
+    stepSize: 10
+  - start: 50
+    end: 100
+    stepSize: 10
+  - start: 100
+    end: 150
+    stepSize: 10
+  sourceCsv: D:\Data\Desktop\calorie stuff\Groente - Fruit.csv
+  targetImageAssetFolder: Assets/Images/Groente - Fruit/

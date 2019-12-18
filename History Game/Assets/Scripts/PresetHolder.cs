@@ -9,7 +9,7 @@ public class PresetHolder : MonoBehaviour
 	public GamePreset gamePreset;
 
 	[SerializeField]
-	private List<ThemeString> themeStrings;
+	private List<ThemeString> themeStrings = default;
 
 	private void Awake()
 	{
