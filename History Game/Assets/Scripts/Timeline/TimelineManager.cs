@@ -4,8 +4,6 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace Timeline
 {
@@ -18,13 +16,16 @@ namespace Timeline
 		[SerializeField]
 		private float allowedInaccuracy = default;
 
+		[SerializeField]
+		private AnimationCurve slideAnimation = default;
+
 		[Header("Scene References")]
 		[SerializeField]
 		private TextMeshProUGUI descriptionText = default;
 		[SerializeField]
 		private TimeLine timeLine = default;
 		[SerializeField]
-		private RectTransform cardContainer = default;
+		private List<RectTransform> cardSlots = default;
 
 		[Header("Prefab References")]
 		[SerializeField]
@@ -33,6 +34,8 @@ namespace Timeline
 		[Space]
 		[SerializeField]
 		private UnityEvent gameDone = new UnityEvent();
+
+		private bool _interactable = true;
 
 		public void ActivateCard()
 		{
@@ -45,23 +48,61 @@ namespace Timeline
 				return;
 			}
 
-			if (cardContainer.childCount > 0)
+			if (_cards.Any(x => x.ready))
+				StartCoroutine(SlideCards());
+			else
+				StartCoroutine(CheckCards(.75f));
+		}
+
+		private IEnumerator SlideCards()
+		{
+			_interactable = false;
+			for (int i = 1; i < cardSlots.Count; i++)
 			{
-				TimeCard nextCard = cardContainer.GetChild(0).GetComponent<TimeCard>();
-				_activeCard = nextCard;
+				if (cardSlots[i].childCount > 0)
+				{
+					RectTransform firstEmpty = GetFirstEmptySlot();
+					if (firstEmpty)
+						yield return StartCoroutine(SlideCard((RectTransform) cardSlots[i].GetChild(0).transform,
+															  firstEmpty, .15f));
+				}
+			}
+
+			Transform firstFilledSlot = cardSlots.FirstOrDefault(x => x.childCount != 0);
+			if (firstFilledSlot)
+			{
+				_activeCard = firstFilledSlot.GetChild(0).GetComponent<TimeCard>();
 				_activeCard.Activate();
 			}
-			else
+
+			_interactable = true;
+		}
+
+		private RectTransform GetFirstEmptySlot() => cardSlots.FirstOrDefault(x => x.childCount == 0);
+
+		private IEnumerator SlideCard(RectTransform card, RectTransform target, float duration)
+		{
+			Vector3 startPos = card.transform.position;
+
+			for (float elapsed = 0; elapsed < duration; elapsed += Time.deltaTime)
 			{
-				StartCoroutine(CheckCards(.75f));
+//				card.transform.position = Vector3.Lerp(startPos, target.transform.position, elapsed / duration);
+				card.transform.position = Vector3.LerpUnclamped(startPos, target.transform.position, slideAnimation.Evaluate(elapsed / duration));
+				yield return null;
 			}
+
+			card.transform.position = target.transform.position;
+			card.SetParent(target);
 		}
 
 		public void TemporaryHit(Vector3 position)
 		{
-			_activeCard.ready = false;
-			_activeCard.Move(position);
-			ActivateCard();
+			if (_activeCard.ready && _interactable)
+			{
+				_activeCard.ready = false;
+				_activeCard.Move(position);
+				ActivateCard();
+			}
 		}
 
 		private void Start()
@@ -74,14 +115,17 @@ namespace Timeline
 			timeLine.GenerateTimeline(_gamePreset);
 			timeLine.AddCards(_cards);
 
-			ActivateCard();
+			_activeCard = cardSlots[0].GetChild(0).GetComponent<TimeCard>();
+			_activeCard.Activate();
 		}
 
 		private void LoadCardsFromPreset()
 		{
-			foreach (CardData cardData in _gamePreset.GetCards())
+			var list = _gamePreset.GetCards();
+			for (int i = 0; i < list.Count; i++)
 			{
-				TimeCard card = Instantiate(cardPrefab, cardContainer);
+				CardData cardData = list[i];
+				TimeCard card     = Instantiate(cardPrefab, cardSlots[i]);
 				card.Init(cardData);
 				_cards.Add(card);
 			}
@@ -90,32 +134,26 @@ namespace Timeline
 		private IEnumerator CheckCards(float delay)
 		{
 			yield return new WaitForSeconds(delay);
-
-			foreach (TimeCard card in _cards.Where(x => !x.done))
-			{
-				float distance = Vector3.Distance(
-					Camera.main.WorldToScreenPoint(card.transform.position),
-					Camera.main.WorldToScreenPoint(card.target.position));
-
-				if (distance > allowedInaccuracy)
-				{
-					card.MoveBack();
-					DelayedResetLayout(1f);
-				}
-				else
-				{
-					card.done = true;
-					card.Move();
-				}
-			}
-
+			DistanceBasedCheck();
 			ActivateCard();
 		}
 
-		private IEnumerator DelayedResetLayout(float delay)
+		private void DistanceBasedCheck()
 		{
-			yield return new WaitForSeconds(delay);
-			LayoutRebuilder.ForceRebuildLayoutImmediate(cardContainer);
+			List<TimeCard> cards = _cards.Where(x => !x.done).ToList();
+			for (int i = 0; i < cards.Count; i++)
+			{
+				float distance = Vector3.Distance(
+					Camera.main.WorldToScreenPoint(cards[i].transform.position),
+					Camera.main.WorldToScreenPoint(cards[i].target.position));
+
+				if (distance > allowedInaccuracy) cards[i].MoveBack(cardSlots[i]);
+				else
+				{
+					cards[i].done = true;
+					cards[i].Move();
+				}
+			}
 		}
 	}
 }

@@ -19,7 +19,9 @@ namespace Memory
 		private TextMeshProUGUI descriptionText = default;
 
 		[SerializeField]
-		private RectTransform cardContainer = default;
+		private RectTransform imageCardContainer = default;
+		[SerializeField]
+		private RectTransform ValueCardContainer = default;
 
 		[Header("Prefab References")]
 		[SerializeField]
@@ -70,15 +72,18 @@ namespace Memory
 		{
 			for (int i = 0; i < iterations; i++)
 			{
-				int childCount = cardContainer.childCount;
-				cardContainer.GetChild(Random.Range(0, childCount))
-							 .SetSiblingIndex(Random.Range(0, childCount));
+				int childCount = ValueCardContainer.childCount;
+				ValueCardContainer.GetChild(Random.Range(0, childCount))
+								  .SetSiblingIndex(Random.Range(0, childCount));
+				imageCardContainer.GetChild(Random.Range(0, childCount))
+								  .SetSiblingIndex(Random.Range(0, childCount));
 			}
 
 			List<MemoryCard> cards = new List<MemoryCard>();
-			for (int i = 0; i < _matches.Count * 2; i++)
+			for (int i = 0; i < _matches.Count; i++)
 			{
-				cards.Add(cardContainer.GetChild(i).GetComponent<MemoryCard>());
+				cards.Add(ValueCardContainer.GetChild(i).GetComponent<MemoryCard>());
+				cards.Add(imageCardContainer.GetChild(i).GetComponent<MemoryCard>());
 			}
 
 			cards = cards.OrderByDescending(x => (int) x.textOrImage).ToList();
@@ -92,8 +97,8 @@ namespace Memory
 		{
 			foreach (MatchData matchData in _gamePreset.GetMatches())
 			{
-				MemoryCard cardA = Instantiate(cardPrefab, cardContainer);
-				MemoryCard cardB = Instantiate(cardPrefab, cardContainer);
+				MemoryCard cardA = Instantiate(cardPrefab, imageCardContainer);
+				MemoryCard cardB = Instantiate(cardPrefab, ValueCardContainer);
 				cardA.Init(matchData.cardDataA);
 				cardB.Init(matchData.cardDataB);
 

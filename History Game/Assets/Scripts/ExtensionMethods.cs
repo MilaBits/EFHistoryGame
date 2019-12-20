@@ -1,4 +1,5 @@
 using System;
+using System.Numerics;
 
 public static class ExtensionMethods
 {
@@ -19,5 +20,5 @@ public static class ExtensionMethods
 			array[n] = array[k];
 			array[k] = temp;
 		}
-	}
+	}	
 }

@@ -36,12 +36,9 @@ namespace Timeline
 			image.color = end;
 		}
 
-		public void MoveBack()
-		{
-			StartCoroutine(MoveBack(.5f));
-		}
+		public void MoveBack(RectTransform target) => StartCoroutine(MoveBack(.5f, target));
 
-		private IEnumerator MoveBack(float duration)
+		private IEnumerator MoveBack(float duration, RectTransform target)
 		{
 			Vector3 startPos   = transform.position;
 			Vector3 startScale = transform.localScale;
@@ -49,14 +46,14 @@ namespace Timeline
 			for (float elapsed = 0; elapsed < duration; elapsed += Time.deltaTime)
 			{
 				float progress = elapsed / duration;
-				transform.position   = Vector3.Lerp(startPos, originalPosition, progress);
+				transform.position   = Vector3.Lerp(startPos, target.position, progress);
 				transform.localScale = Vector3.Lerp(startScale, Vector3.one, progress);
 				yield return null;
 			}
 
-			transform.position   = originalPosition;
+			transform.position   = target.position;
 			transform.localScale = Vector3.one;
-			transform.SetParent(originalParent, false);
+			transform.SetParent(target, true);
 			ready = true;
 		}
 
