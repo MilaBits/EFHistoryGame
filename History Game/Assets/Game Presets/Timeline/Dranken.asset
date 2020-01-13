@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b13b3025f643c185d2ab17b423a952, type: 3}
   m_Name: Dranken
   m_EditorClassIdentifier: 
-  description: Zet de afbeeldingen op de tijdlijn
+  description: "Raad de Calorie\xEBn"
   numberOfItems: 8
   cards:
   - textOrImage: 3
