@@ -11,6 +11,7 @@ public abstract class Card : MonoBehaviour
 	public new string name;
 	public Sprite sprite;
 	public int year;
+	public int wrongCount;
 
 	[SerializeField]
 	protected Animator animator = default;

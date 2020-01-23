@@ -26,6 +26,7 @@ namespace Timeline
 		private List<CardData> cards = new List<CardData>();
 
 		public List<TimeRange> timeRanges = new List<TimeRange>();
+		public int wrongCount = 3;
 
 #if UNITY_EDITOR
 

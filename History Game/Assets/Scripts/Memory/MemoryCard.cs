@@ -13,23 +13,14 @@ namespace Memory
 		public bool interactable = true;
 
 		public MemoryManager manager;
-		private static readonly int FinishTrigger = Animator.StringToHash("Finish");
+		private static readonly int FinishGoodTrigger = Animator.StringToHash("Finish Good");
+		private static readonly int FinishBadTrigger = Animator.StringToHash("Finish Bad");
 
 		private void Awake()
 		{
-			Hide();
+			Select(false);
 			StartCoroutine(DelayedFlip(true, .5f, UnityEngine.Random.Range(.1f, 1f)));
 			interactable = true;
-		}
-
-		public void Reveal()
-		{
-			Select(true);
-		}
-
-		public void Hide()
-		{
-			Select(false);
 		}
 
 		private IEnumerator DelayedFlip(bool show, float duration, float delay)
@@ -39,7 +30,7 @@ namespace Memory
 			StartCoroutine(Flip(show, duration));
 		}
 
-		private void Select(bool select)
+		public void Select(bool select)
 		{
 			Glow(select);
 			interactable = !select;
@@ -128,17 +119,19 @@ namespace Memory
 
 			StartCoroutine(Bounce(.5f));
 
-			Reveal();
+			Select(true);
 			manager.CheckCards(this);
 		}
 
-		public void Finish()
+		public void Finish(bool good)
 		{
 			interactable = false;
 			done         = true;
 
 			Glow(false);
-			animator.SetTrigger(FinishTrigger);
+
+			if (good) animator.SetTrigger(FinishGoodTrigger);
+			else animator.SetTrigger(FinishBadTrigger);
 		}
 	}
 }

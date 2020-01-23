@@ -3,6 +3,7 @@ using System.Collections;
 using SmartwallPackage.SmartwallInput;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Timeline
 {
@@ -14,6 +15,10 @@ namespace Timeline
 
 		[SerializeField]
 		private Color highlightColor;
+
+		[SerializeField]
+		private Image fill;
+
 
 		private Transform originalParent;
 		private Vector3 originalPosition;
@@ -38,8 +43,16 @@ namespace Timeline
 
 		public void MoveBack(RectTransform target) => StartCoroutine(MoveBack(.5f, target));
 
+		public void SetFill(float value, Color color)
+		{
+			fill.fillAmount = value;
+			fill.color      = color;
+		}
+
 		private IEnumerator MoveBack(float duration, RectTransform target)
 		{
+			transform.SetParent(target, true);
+
 			Vector3 startPos   = transform.position;
 			Vector3 startScale = transform.localScale;
 
@@ -53,8 +66,7 @@ namespace Timeline
 
 			transform.position   = target.position;
 			transform.localScale = Vector3.one;
-			transform.SetParent(target, true);
-			ready = true;
+			ready                = true;
 		}
 
 		private IEnumerator MoveTransform(Vector3 startPos, Vector3 endPos, float time, Vector3 targetScale)

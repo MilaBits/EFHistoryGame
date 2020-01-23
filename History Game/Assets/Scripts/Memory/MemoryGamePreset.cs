@@ -16,6 +16,9 @@ namespace Memory
 	{
 		public string description;
 
+		[SerializeField]
+		public int wrongCount = 3;
+
 		[SerializeField, Range(2, 6)]
 		private int numberOfMatches = 6;
 

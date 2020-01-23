@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Timeline
 {
@@ -12,6 +13,7 @@ namespace Timeline
 		private TimelineGamePreset _gamePreset = default;
 		private List<TimeCard> _cards = new List<TimeCard>();
 		private TimeCard _activeCard;
+		private int _score;
 
 		[SerializeField]
 		private float allowedInaccuracy = default;
@@ -26,6 +28,8 @@ namespace Timeline
 		private TimeLine timeLine = default;
 		[SerializeField]
 		private List<RectTransform> cardSlots = default;
+		[SerializeField]
+		private TextMeshProUGUI scoreText = default;
 
 		[Header("Prefab References")]
 		[SerializeField]
@@ -36,6 +40,7 @@ namespace Timeline
 		private UnityEvent gameDone = new UnityEvent();
 
 		private bool _interactable = true;
+		private bool _cardsReturned = false;
 
 		public void ActivateCard()
 		{
@@ -49,9 +54,13 @@ namespace Timeline
 			}
 
 			if (_cards.Any(x => x.ready))
-				StartCoroutine(SlideCards());
+			{
+				if (cardSlots[1].childCount > 0) StartCoroutine(SlideCards());
+			}
 			else
+			{
 				StartCoroutine(CheckCards(.75f));
+			}
 		}
 
 		private IEnumerator SlideCards()
@@ -59,14 +68,16 @@ namespace Timeline
 			_interactable = false;
 			for (int i = 1; i < cardSlots.Count; i++)
 			{
-				if (cardSlots[i].childCount > 0)
+				if (cardSlots[i].childCount > 0 && cardSlots[0].childCount == 0)
 				{
-					RectTransform firstEmpty = GetFirstEmptySlot();
-					if (firstEmpty)
-						yield return StartCoroutine(SlideCard((RectTransform) cardSlots[i].GetChild(0).transform,
-															  firstEmpty, .15f));
+					StartCoroutine(
+						SlideCard((RectTransform) cardSlots[i].GetChild(0).transform,
+								  cardSlots[i - 1],
+								  .15f));
 				}
 			}
+
+			yield return new WaitForSeconds(.15f);
 
 			Transform firstFilledSlot = cardSlots.FirstOrDefault(x => x.childCount != 0);
 			if (firstFilledSlot)
@@ -78,16 +89,15 @@ namespace Timeline
 			_interactable = true;
 		}
 
-		private RectTransform GetFirstEmptySlot() => cardSlots.FirstOrDefault(x => x.childCount == 0);
-
 		private IEnumerator SlideCard(RectTransform card, RectTransform target, float duration)
 		{
 			Vector3 startPos = card.transform.position;
 
 			for (float elapsed = 0; elapsed < duration; elapsed += Time.deltaTime)
 			{
-//				card.transform.position = Vector3.Lerp(startPos, target.transform.position, elapsed / duration);
-				card.transform.position = Vector3.LerpUnclamped(startPos, target.transform.position, slideAnimation.Evaluate(elapsed / duration));
+				card.transform.position =
+					Vector3.LerpUnclamped(startPos, target.transform.position,
+										  slideAnimation.Evaluate(elapsed / duration));
 				yield return null;
 			}
 
@@ -135,25 +145,71 @@ namespace Timeline
 		{
 			yield return new WaitForSeconds(delay);
 			DistanceBasedCheck();
-			ActivateCard();
 		}
 
 		private void DistanceBasedCheck()
 		{
-			List<TimeCard> cards = _cards.Where(x => !x.done).ToList();
+			List<TimeCard> removeBuffer = new List<TimeCard>();
+			List<TimeCard> returnBuffer = new List<TimeCard>();
+			List<TimeCard> cards        = _cards.Where(x => !x.done).ToList();
 			for (int i = 0; i < cards.Count; i++)
 			{
 				float distance = Vector3.Distance(
 					Camera.main.WorldToScreenPoint(cards[i].transform.position),
 					Camera.main.WorldToScreenPoint(cards[i].target.position));
 
-				if (distance > allowedInaccuracy) cards[i].MoveBack(cardSlots[i]);
+				if (distance > allowedInaccuracy)
+				{
+					cards[i].wrongCount++;
+
+					if (cards[i].wrongCount > _gamePreset.wrongCount)
+					{
+						removeBuffer.Add(cards[i]);
+					}
+					else
+					{
+						returnBuffer.Add(cards[i]);
+					}
+				}
 				else
 				{
+					UpdateScore(_gamePreset.wrongCount - cards[i].wrongCount);
 					cards[i].done = true;
 					cards[i].Move();
 				}
 			}
+
+			foreach (TimeCard card in removeBuffer)
+			{
+				TimeCard removeCard = _cards.Find(x => x == card);
+				_cards.Remove(removeCard);
+				Destroy(removeCard);
+			}
+
+			StartCoroutine(ReturnCards(returnBuffer));
+		}
+
+		private IEnumerator ReturnCards(List<TimeCard> cards)
+		{
+			_cardsReturned = true;
+			for (var i = 0; i < cards.Count; i++)
+				yield return StartCoroutine(ReturnCard(cards[i], .1f, cardSlots[i]));
+
+			ActivateCard();
+		}
+
+		private IEnumerator ReturnCard(TimeCard card, float waitTime, RectTransform target)
+		{
+			yield return new WaitForSeconds(waitTime);
+			float value = (float) card.wrongCount / _gamePreset.wrongCount;
+			card.SetFill(value, Color.Lerp(Color.yellow, Color.red, value));
+			card.MoveBack(target);
+		}
+
+		private void UpdateScore(int value)
+		{
+			_score         += value;
+			scoreText.text =  _score.ToString();
 		}
 	}
 }

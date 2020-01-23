@@ -13,6 +13,7 @@ namespace Memory
 		private List<MemoryCard> _activeCards = new List<MemoryCard>();
 		private List<Match> _matches = new List<Match>();
 		private int _doneCount;
+		private int _score = 0;
 
 		[Header("Scene References")]
 		[SerializeField]
@@ -21,7 +22,9 @@ namespace Memory
 		[SerializeField]
 		private RectTransform imageCardContainer = default;
 		[SerializeField]
-		private RectTransform ValueCardContainer = default;
+		private RectTransform valueCardContainer = default;
+		[SerializeField]
+		private TextMeshProUGUI scoreText = default;
 
 		[Header("Prefab References")]
 		[SerializeField]
@@ -34,7 +37,7 @@ namespace Memory
 
 		private void Start()
 		{
-			_gamePreset = FindObjectOfType<PresetHolder>().gamePreset.memoryPreset;
+			_gamePreset          = FindObjectOfType<PresetHolder>().gamePreset.memoryPreset;
 			descriptionText.text = _gamePreset.description;
 			LoadMatches();
 			ShuffleCards(12);
@@ -50,7 +53,8 @@ namespace Memory
 				{
 					foreach (MemoryCard activeCard in _activeCards)
 					{
-						activeCard.Finish();
+						activeCard.Finish(true);
+						UpdateScore(_gamePreset.wrongCount - activeCard.wrongCount);
 						_doneCount++;
 					}
 				}
@@ -58,7 +62,15 @@ namespace Memory
 				{
 					foreach (MemoryCard activeCard in _activeCards)
 					{
-						activeCard.Hide();
+						activeCard.wrongCount++;
+						activeCard.Select(false);
+
+						if (activeCard.wrongCount >= _gamePreset.wrongCount)
+						{
+							activeCard.match.cardA.Finish(false);
+							activeCard.match.cardB.Finish(false);
+							_doneCount += 2;
+						}
 					}
 				}
 
@@ -68,12 +80,18 @@ namespace Memory
 			if (_doneCount >= _matches.Count * 2) gameDone.Invoke();
 		}
 
+		private void UpdateScore(int value)
+		{
+			_score          += value;
+			scoreText.text =  _score.ToString();
+		}
+
 		private void ShuffleCards(int iterations)
 		{
 			for (int i = 0; i < iterations; i++)
 			{
-				int childCount = ValueCardContainer.childCount;
-				ValueCardContainer.GetChild(Random.Range(0, childCount))
+				int childCount = valueCardContainer.childCount;
+				valueCardContainer.GetChild(Random.Range(0, childCount))
 								  .SetSiblingIndex(Random.Range(0, childCount));
 				imageCardContainer.GetChild(Random.Range(0, childCount))
 								  .SetSiblingIndex(Random.Range(0, childCount));
@@ -82,7 +100,7 @@ namespace Memory
 			List<MemoryCard> cards = new List<MemoryCard>();
 			for (int i = 0; i < _matches.Count; i++)
 			{
-				cards.Add(ValueCardContainer.GetChild(i).GetComponent<MemoryCard>());
+				cards.Add(valueCardContainer.GetChild(i).GetComponent<MemoryCard>());
 				cards.Add(imageCardContainer.GetChild(i).GetComponent<MemoryCard>());
 			}
 
@@ -98,7 +116,7 @@ namespace Memory
 			foreach (MatchData matchData in _gamePreset.GetMatches())
 			{
 				MemoryCard cardA = Instantiate(cardPrefab, imageCardContainer);
-				MemoryCard cardB = Instantiate(cardPrefab, ValueCardContainer);
+				MemoryCard cardB = Instantiate(cardPrefab, valueCardContainer);
 				cardA.Init(matchData.cardDataA);
 				cardB.Init(matchData.cardDataB);
 
