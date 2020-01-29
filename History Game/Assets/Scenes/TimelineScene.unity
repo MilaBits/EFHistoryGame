@@ -669,6 +669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoSwitch: 0
   scene: 
+  delay: 3
 --- !u!1 &836532678
 GameObject:
   m_ObjectHideFlags: 0

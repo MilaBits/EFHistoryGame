@@ -17,7 +17,7 @@ namespace Timeline
 		private Color highlightColor;
 
 		[SerializeField]
-		private Image fill;
+		private Image fill = default;
 
 
 		private Transform originalParent;
@@ -51,6 +51,7 @@ namespace Timeline
 
 		private IEnumerator MoveBack(float duration, RectTransform target)
 		{
+			audioSource.Play();
 			transform.SetParent(target, true);
 
 			Vector3 startPos   = transform.position;
@@ -77,6 +78,7 @@ namespace Timeline
 			Vector3 startScale = transform.localScale;
 			transform.SetParent(GetComponentInParent<Canvas>().transform);
 
+			audioSource.Play();
 			for (float passedTime = 0; passedTime < time; passedTime += Time.deltaTime)
 			{
 				float progress = passedTime / time;

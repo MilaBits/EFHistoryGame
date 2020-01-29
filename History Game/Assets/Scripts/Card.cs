@@ -22,9 +22,14 @@ public abstract class Card : MonoBehaviour
 	[SerializeField]
 	protected TextMeshProUGUI text;
 	[Space]
+	[SerializeField]
+	protected AudioSource audioSource;
+
 	public bool done;
 
 	public void Glow(bool glow) => animator.SetBool(Pulsate, glow);
+
+	public void PlaySound(AudioClip clip) => audioSource.PlayOneShot(clip);
 
 	public void Init(CardData data)
 	{

@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 namespace Timeline
 {
@@ -40,10 +40,11 @@ namespace Timeline
 		private UnityEvent gameDone = new UnityEvent();
 
 		private bool _interactable = true;
-		private bool _cardsReturned = false;
+		private bool _resetting = false;
 
 		public void ActivateCard()
 		{
+			Debug.Log("Activating a new card");
 			if (_activeCard) _activeCard.Deactivate();
 
 			List<TimeCard> availableCards = _cards.Where(x => !x.done).ToList();
@@ -53,12 +54,14 @@ namespace Timeline
 				return;
 			}
 
-			if (_cards.Any(x => x.ready))
+			bool anyReady = _cards.Any(x => x.ready);
+			if (anyReady && cardSlots[1].childCount > 0)
 			{
-				if (cardSlots[1].childCount > 0) StartCoroutine(SlideCards());
+				StartCoroutine(SlideCards());
 			}
-			else
+			else if (!anyReady && _resetting == false)
 			{
+				_resetting = true;
 				StartCoroutine(CheckCards(.75f));
 			}
 		}
@@ -149,6 +152,7 @@ namespace Timeline
 
 		private void DistanceBasedCheck()
 		{
+			Debug.Log("Checking");
 			List<TimeCard> removeBuffer = new List<TimeCard>();
 			List<TimeCard> returnBuffer = new List<TimeCard>();
 			List<TimeCard> cards        = _cards.Where(x => !x.done).ToList();
@@ -191,10 +195,9 @@ namespace Timeline
 
 		private IEnumerator ReturnCards(List<TimeCard> cards)
 		{
-			_cardsReturned = true;
 			for (var i = 0; i < cards.Count; i++)
 				yield return StartCoroutine(ReturnCard(cards[i], .1f, cardSlots[i]));
-
+			_resetting = false;
 			ActivateCard();
 		}
 
