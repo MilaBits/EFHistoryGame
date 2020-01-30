@@ -14,13 +14,12 @@ namespace Timeline
 		private List<TimeCard> _cards = new List<TimeCard>();
 		private TimeCard _activeCard;
 		private int _score;
-
+		private bool _interactable = true;
+		private int turns;
 		[SerializeField]
 		private float allowedInaccuracy = default;
-
 		[SerializeField]
 		private AnimationCurve slideAnimation = default;
-
 		[Header("Scene References")]
 		[SerializeField]
 		private TextMeshProUGUI descriptionText = default;
@@ -30,66 +29,54 @@ namespace Timeline
 		private List<RectTransform> cardSlots = default;
 		[SerializeField]
 		private TextMeshProUGUI scoreText = default;
-
 		[Header("Prefab References")]
 		[SerializeField]
 		private TimeCard cardPrefab = default;
-
 		[Space]
 		[SerializeField]
 		private UnityEvent gameDone = new UnityEvent();
 
-		private bool _interactable = true;
-		private bool _resetting = false;
-
-		public void ActivateCard()
+		public void NextCard(bool tryCheck)
 		{
-			Debug.Log("Activating a new card");
+			Debug.Log("Going to next card");
 			if (_activeCard) _activeCard.Deactivate();
 
 			List<TimeCard> availableCards = _cards.Where(x => !x.done).ToList();
-			if (availableCards.Count < 1)
+			if (availableCards.Count < 1 || turns >= 3)
 			{
 				gameDone.Invoke();
 				return;
 			}
 
 			bool anyReady = _cards.Any(x => x.ready);
-			if (anyReady && cardSlots[1].childCount > 0)
-			{
-				StartCoroutine(SlideCards());
-			}
-			else if (!anyReady && _resetting == false)
-			{
-				_resetting = true;
-				StartCoroutine(CheckCards(.75f));
-			}
+			if (anyReady && cardSlots[1].childCount > 0) StartCoroutine(SlideCards());
+			else if (tryCheck) StartCoroutine(CheckCards(.75f));
 		}
 
 		private IEnumerator SlideCards()
 		{
 			_interactable = false;
 			for (int i = 1; i < cardSlots.Count; i++)
-			{
 				if (cardSlots[i].childCount > 0 && cardSlots[0].childCount == 0)
-				{
 					StartCoroutine(
-						SlideCard((RectTransform) cardSlots[i].GetChild(0).transform,
-								  cardSlots[i - 1],
-								  .15f));
-				}
-			}
-
+						SlideCard((RectTransform) cardSlots[i].GetChild(0).transform, cardSlots[i - 1], .15f));
 			yield return new WaitForSeconds(.15f);
+			ActivateFirstCard();
+		}
 
+		private bool ActivateFirstCard()
+		{
+			Debug.Log("activating card");
 			Transform firstFilledSlot = cardSlots.FirstOrDefault(x => x.childCount != 0);
 			if (firstFilledSlot)
 			{
 				_activeCard = firstFilledSlot.GetChild(0).GetComponent<TimeCard>();
 				_activeCard.Activate();
+				_interactable = true;
+				return true;
 			}
 
-			_interactable = true;
+			return false;
 		}
 
 		private IEnumerator SlideCard(RectTransform card, RectTransform target, float duration)
@@ -114,13 +101,13 @@ namespace Timeline
 			{
 				_activeCard.ready = false;
 				_activeCard.Move(position);
-				ActivateCard();
+				NextCard(true);
 			}
 		}
 
 		private void Start()
 		{
-			_gamePreset          = FindObjectOfType<PresetHolder>().gamePreset.timelinePreset;
+			_gamePreset = FindObjectOfType<PresetHolder>().gamePreset.timelinePreset;
 			descriptionText.text = _gamePreset.description;
 
 			LoadCardsFromPreset();
@@ -138,7 +125,7 @@ namespace Timeline
 			for (int i = 0; i < list.Count; i++)
 			{
 				CardData cardData = list[i];
-				TimeCard card     = Instantiate(cardPrefab, cardSlots[i]);
+				TimeCard card = Instantiate(cardPrefab, cardSlots[i]);
 				card.Init(cardData);
 				_cards.Add(card);
 			}
@@ -153,9 +140,8 @@ namespace Timeline
 		private void DistanceBasedCheck()
 		{
 			Debug.Log("Checking");
-			List<TimeCard> removeBuffer = new List<TimeCard>();
 			List<TimeCard> returnBuffer = new List<TimeCard>();
-			List<TimeCard> cards        = _cards.Where(x => !x.done).ToList();
+			List<TimeCard> cards = _cards.Where(x => !x.done).ToList();
 			for (int i = 0; i < cards.Count; i++)
 			{
 				float distance = Vector3.Distance(
@@ -165,15 +151,7 @@ namespace Timeline
 				if (distance > allowedInaccuracy)
 				{
 					cards[i].wrongCount++;
-
-					if (cards[i].wrongCount > _gamePreset.wrongCount)
-					{
-						removeBuffer.Add(cards[i]);
-					}
-					else
-					{
-						returnBuffer.Add(cards[i]);
-					}
+					returnBuffer.Add(cards[i]);
 				}
 				else
 				{
@@ -183,22 +161,14 @@ namespace Timeline
 				}
 			}
 
-			foreach (TimeCard card in removeBuffer)
-			{
-				TimeCard removeCard = _cards.Find(x => x == card);
-				_cards.Remove(removeCard);
-				Destroy(removeCard);
-			}
-
 			StartCoroutine(ReturnCards(returnBuffer));
 		}
 
 		private IEnumerator ReturnCards(List<TimeCard> cards)
 		{
-			for (var i = 0; i < cards.Count; i++)
-				yield return StartCoroutine(ReturnCard(cards[i], .1f, cardSlots[i]));
-			_resetting = false;
-			ActivateCard();
+			turns++;
+			for (var i = 0; i < cards.Count; i++) yield return StartCoroutine(ReturnCard(cards[i], .1f, cardSlots[i]));
+			if (!ActivateFirstCard()) NextCard(false);
 		}
 
 		private IEnumerator ReturnCard(TimeCard card, float waitTime, RectTransform target)
@@ -211,8 +181,8 @@ namespace Timeline
 
 		private void UpdateScore(int value)
 		{
-			_score         += value;
-			scoreText.text =  _score.ToString();
+			_score += value;
+			scoreText.text = _score.ToString();
 		}
 	}
 }

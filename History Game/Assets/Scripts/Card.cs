@@ -34,9 +34,9 @@ public abstract class Card : MonoBehaviour
 	public void Init(CardData data)
 	{
 		textOrImage = data.textOrImage;
-		sprite      = data.sprite;
-		name        = data.name;
-		year        = data.value;
+		sprite = data.sprite;
+		name = data.name;
+		year = data.value;
 
 		switch (textOrImage)
 		{
@@ -50,11 +50,11 @@ public abstract class Card : MonoBehaviour
 				image.sprite = sprite;
 				break;
 			case TextOrImage.NameAndImage:
-				text.text    = name;
+				text.text = name;
 				image.sprite = sprite;
 				break;
 			case TextOrImage.ValueAndImage:
-				text.text    = year.ToString();
+				text.text = year.ToString();
 				image.sprite = sprite;
 				break;
 		}

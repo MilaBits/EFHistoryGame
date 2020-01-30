@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
-using SmartwallPackage.SmartwallInput;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Timeline
@@ -14,14 +12,7 @@ namespace Timeline
 		public bool ready = true;
 
 		[SerializeField]
-		private Color highlightColor;
-
-		[SerializeField]
 		private Image fill = default;
-
-
-		private Transform originalParent;
-		private Vector3 originalPosition;
 
 		public void Move() =>
 			StartCoroutine(MoveTransform(transform.position, target.transform.position, .5f,
@@ -29,17 +20,6 @@ namespace Timeline
 
 		public void Move(Vector3 position) => StartCoroutine(MoveTransform(transform.position, position, .5f,
 																		   new Vector3(0.2f, 0.2f, 1)));
-
-		private IEnumerator FadeColor(Color start, Color end, float time)
-		{
-			for (float passedTime = 0; passedTime < time; passedTime += Time.deltaTime)
-			{
-				image.color = Color.Lerp(start, end, passedTime);
-				yield return null;
-			}
-
-			image.color = end;
-		}
 
 		public void MoveBack(RectTransform target) => StartCoroutine(MoveBack(.5f, target));
 
@@ -72,9 +52,6 @@ namespace Timeline
 
 		private IEnumerator MoveTransform(Vector3 startPos, Vector3 endPos, float time, Vector3 targetScale)
 		{
-			originalParent   = transform.parent;
-			originalPosition = transform.position;
-
 			Vector3 startScale = transform.localScale;
 			transform.SetParent(GetComponentInParent<Canvas>().transform);
 
@@ -91,14 +68,7 @@ namespace Timeline
 			transform.localScale = targetScale;
 		}
 
-		public void Deactivate()
-		{
-			Glow(false);
-		}
-
-		public void Activate()
-		{
-			Glow(true);
-		}
+		public void Deactivate() => Glow(false);
+		public void Activate() => Glow(true);
 	}
 }

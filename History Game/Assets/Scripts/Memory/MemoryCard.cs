@@ -42,7 +42,7 @@ namespace Memory
 			interactable = false;
 
 			Vector3 start = transform.localScale;
-			Vector3 end   = new Vector3(-start.x, 1, 1);
+			Vector3 end = new Vector3(-start.x, 1, 1);
 
 			for (float passedTime = 0; passedTime < duration; passedTime += Time.deltaTime)
 			{
@@ -52,7 +52,7 @@ namespace Memory
 				{
 					halfwayDone = true;
 					Vector3 temp = end;
-					end   = start;
+					end = start;
 					start = temp;
 					ToggleView(show);
 				}
@@ -63,15 +63,15 @@ namespace Memory
 			}
 
 			ToggleView(show);
-			interactable         = true;
+			interactable = true;
 			transform.localScale = end;
 		}
 
 		private IEnumerator Bounce(float duration)
 		{
-			Vector3 startPos  = transform.position;
+			Vector3 startPos = transform.position;
 			Vector3 targetPos = transform.position + Vector3.up * .1f;
-			float   halfTime  = duration / 2;
+			float halfTime = duration / 2;
 
 			for (float elapsed = 0; elapsed < halfTime; elapsed += Time.deltaTime)
 			{
@@ -84,7 +84,6 @@ namespace Memory
 			for (float elapsed = 0; elapsed < halfTime; elapsed += Time.deltaTime)
 			{
 				transform.position = Vector3.Lerp(targetPos, startPos, elapsed / halfTime);
-
 				yield return null;
 			}
 
@@ -126,7 +125,7 @@ namespace Memory
 		public void Finish(bool good)
 		{
 			interactable = false;
-			done         = true;
+			done = true;
 
 			Glow(false);
 
