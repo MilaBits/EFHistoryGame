@@ -16,119 +16,119 @@ MonoBehaviour:
   numberOfItems: 8
   cards:
   - textOrImage: 3
-    name: Bitterbal Stuk gefrituurd (15 gram)
+    name: Bitterbal Stuk gefrituurd
     value: 35
     sprite: {fileID: 21300000, guid: aae678c6996910c458028994cdeb5133, type: 3}
   - textOrImage: 3
-    name: bonbon Stuk (15 gram)
+    name: 'bonbon Stuk '
     value: 78
     sprite: {fileID: 21300000, guid: 475c6d53e01f3ed4590368641a89860a, type: 3}
   - textOrImage: 3
-    name: borrelnootjes Eetlepel (10 gram)
+    name: 'borrelnootjes Eetlepel '
     value: 55
     sprite: {fileID: 21300000, guid: 0e92552db53b17d4391c47ef3c5635e7, type: 3}
   - textOrImage: 3
-    name: Bounty Reep (55 gram)
+    name: Bounty Reep
     value: 267
     sprite: {fileID: 21300000, guid: 1ad91f40b79752e4a8b4c2648dc9bd75, type: 3}
   - textOrImage: 3
-    name: cashew-noten Stuk ongezouten (2 gram)
+    name: cashew-noten Stuk ongezouten
     value: 12
     sprite: {fileID: 21300000, guid: 5a83f0aea95114b4c8231ed02d90be04, type: 3}
   - textOrImage: 3
-    name: chips (naturel) Zakje (25 gram)
+    name: chips (naturel) Zakje
     value: 136
     sprite: {fileID: 21300000, guid: 2f4c48c7cf2c96f4e87fc6beb3bfed99, type: 3}
   - textOrImage: 3
-    name: chocolade (melk) Blokje (7 gram)
+    name: 'chocolade (melk) Blokje '
     value: 39
     sprite: {fileID: 21300000, guid: b1ef2711a0b64d746ab47544496b1e84, type: 3}
   - textOrImage: 3
-    name: cornetto Stuk (70 gram)
+    name: 'cornetto Stuk '
     value: 208
     sprite: {fileID: 21300000, guid: 326f0027442f72444a711dc397b26784, type: 3}
   - textOrImage: 3
-    name: drop (gemiddeld) Stuk (4 gram)
+    name: drop (gemiddeld) Stuk
     value: 13
     sprite: {fileID: 21300000, guid: e74fdb61544dfff499b9bc501083d1e4, type: 3}
   - textOrImage: 3
-    name: ijslolly-waterijs Stuk (55 grram)
+    name: ijslolly-waterijs Stuk
     value: 50
     sprite: {fileID: 21300000, guid: e6d082de8a549524dbd03765928bb380, type: 3}
   - textOrImage: 3
-    name: kauwgom Stuk (2 gram)
+    name: kauwgom Stuk
     value: 6
     sprite: {fileID: 21300000, guid: cc7addbf219d3264d936409e735262c0, type: 3}
   - textOrImage: 3
-    name: kitkat Stuk, hele  (45 gram)
+    name: kitkat Stuk, hele
     value: 234
     sprite: {fileID: 21300000, guid: 4d6d1a7d1c8b55343979c42eed64e505, type: 3}
   - textOrImage: 3
-    name: lolly Stuk (10 gram)
+    name: 'lolly Stuk '
     value: 38
     sprite: {fileID: 21300000, guid: f748567ff0f79c642bb8917b71fb5513, type: 3}
   - textOrImage: 3
-    name: M&M's (pinda's) Mini zakje (20 gram)
+    name: M&M's (pinda's) Mini zakje
     value: 102
     sprite: {fileID: 21300000, guid: 2c2fd3535915bea47b662d5b58a8abf3, type: 3}
   - textOrImage: 3
-    name: Mars Reep (50 gram)
+    name: 'Mars Reep '
     value: 224
     sprite: {fileID: 21300000, guid: 126452bcb6201d14bb441edc57163dac, type: 3}
   - textOrImage: 3
-    name: noten (gemengd) Eetlepel, ongezouten (20 gram)
+    name: noten (gemengd) Eetlepel, ongezouten
     value: 130
     sprite: {fileID: 21300000, guid: 4cc24e11cdd78344a8cf31f009e4f335, type: 3}
   - textOrImage: 3
-    name: Nuts Stuk (40 gram)
+    name: 'Nuts Stuk '
     value: 197
     sprite: {fileID: 21300000, guid: 4cc24e11cdd78344a8cf31f009e4f335, type: 3}
   - textOrImage: 3
-    name: pinda's (gezouten) Eetlepel (20 gram)
+    name: 'pinda''s (gezouten) Eetlepel '
     value: 125
     sprite: {fileID: 21300000, guid: 943699e9156580b4a9615f26f8104634, type: 3}
   - textOrImage: 3
-    name: popcorn Handje naturel (10 gram)
+    name: popcorn Handje naturel
     value: 39
     sprite: {fileID: 21300000, guid: 8571c0b5a862a13409425183fd2a3911, type: 3}
   - textOrImage: 3
-    name: roomijs Bolletje (50 gram)
+    name: 'roomijs Bolletje '
     value: 109
     sprite: {fileID: 21300000, guid: 3fa97099a5d52dc478ab82ca16fac1c1, type: 3}
   - textOrImage: 3
-    name: rozijnen Handje (20 gram)
+    name: rozijnen Handje
     value: 65
     sprite: {fileID: 21300000, guid: c4971eb483e534542b972b9db7bb1b4b, type: 3}
   - textOrImage: 3
-    name: Smarties Doosje (15 gram)
+    name: 'Smarties Doosje '
     value: 73
     sprite: {fileID: 21300000, guid: 7e5c33c380fed1b42a619f784aff5ad2, type: 3}
   - textOrImage: 3
-    name: Snickers Stuk (45 gram)
+    name: 'Snickers Stuk '
     value: 227
     sprite: {fileID: 21300000, guid: a01c29288e4f1c845b87f8425f939afa, type: 3}
   - textOrImage: 3
-    name: sultana Pakje fruit- biscuit (40 gram)
+    name: 'sultana Pakje fruit- biscuit '
     value: 154
     sprite: {fileID: 21300000, guid: 24200ec16c639024a8a437867edd1e89, type: 3}
   - textOrImage: 3
-    name: toast (Melba) Stuk volkoren (6 gram)
+    name: toast (Melba) Stuk volkoren
     value: 24
     sprite: {fileID: 21300000, guid: ec049cc2a482f084c937ab76e158f997, type: 3}
   - textOrImage: 3
-    name: tortillachips (naturel) Handje (15 gram)
+    name: tortillachips (naturel) Handje
     value: 73
     sprite: {fileID: 21300000, guid: a5377deee3330fe4c8819228706e418e, type: 3}
   - textOrImage: 3
-    name: Twix Stuks (50 gram)
+    name: Twix Stuks
     value: 248
     sprite: {fileID: 21300000, guid: 947ef135d18d1be44ba2e7ba6c794b06, type: 3}
   - textOrImage: 3
-    name: winegums Stuk (5 gram)
+    name: winegums Stuk
     value: 18
     sprite: {fileID: 21300000, guid: 5d523f617abb10c44afdf3f535ac5c7a, type: 3}
   - textOrImage: 3
-    name: wokkels Zakje (30 gram)
+    name: wokkels Zakje
     value: 148
     sprite: {fileID: 21300000, guid: 75607aa0af32b8e4084527d7c4634dae, type: 3}
   timeRanges:
@@ -141,5 +141,6 @@ MonoBehaviour:
   - start: 100
     end: 150
     stepSize: 10
+  wrongCount: 3
   sourceCsv: D:\Data\Desktop\calorie stuff\Snacks.csv
   targetImageAssetFolder: Assets/Images/Snacks/

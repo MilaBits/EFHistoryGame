@@ -13,176 +13,177 @@ MonoBehaviour:
   m_Name: Dranken
   m_EditorClassIdentifier: 
   description: "Raad de Calorie\xEBn"
+  wrongCount: 3
   numberOfMatches: 6
   matches:
   - cardDataA:
       textOrImage: 1
-      name: appelsap 1 glas, 250 ml
+      name: appelsap 1 glas
       value: 69
       sprite: {fileID: 21300000, guid: 5807b641d79b58c45a7a371e8d20f0d1, type: 3}
     cardDataB:
       textOrImage: 3
-      name: appelsap 1 glas, 250 ml
+      name: appelsap 1 glas
       value: 69
       sprite: {fileID: 21300000, guid: 5807b641d79b58c45a7a371e8d20f0d1, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: bier (pils) 1 glas, 250 ml
+      name: bier (pils) 1 glas
       value: 115
       sprite: {fileID: 21300000, guid: d467eb7246c4e0a41b3d7735cffec33b, type: 3}
     cardDataB:
       textOrImage: 3
-      name: bier (pils) 1 glas, 250 ml
+      name: bier (pils) 1 glas
       value: 115
       sprite: {fileID: 21300000, guid: d467eb7246c4e0a41b3d7735cffec33b, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: chocolademelk (halfvol) 1 glas, 250 ml
+      name: chocolademelk (halfvol) 1 glas
       value: 200
       sprite: {fileID: 21300000, guid: c0ca79b37ea172d45b7d5cd793ab3433, type: 3}
     cardDataB:
       textOrImage: 3
-      name: chocolademelk (halfvol) 1 glas, 250 ml
+      name: chocolademelk (halfvol) 1 glas
       value: 200
       sprite: {fileID: 21300000, guid: c0ca79b37ea172d45b7d5cd793ab3433, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: cola 1 glas, 250 ml
+      name: cola 1 glas
       value: 105
       sprite: {fileID: 21300000, guid: 76618994dbaba0645ad15d2e5e58d609, type: 3}
     cardDataB:
       textOrImage: 3
-      name: cola 1 glas, 250 ml
+      name: cola 1 glas
       value: 105
       sprite: {fileID: 21300000, guid: 76618994dbaba0645ad15d2e5e58d609, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: 'cola light 1 glas, 250 ml '
+      name: cola light 1 glas
       value: 3
       sprite: {fileID: 21300000, guid: e1d272859333bfd4db70860e2d216eb6, type: 3}
     cardDataB:
       textOrImage: 3
-      name: 'cola light 1 glas, 250 ml '
+      name: cola light 1 glas
       value: 3
       sprite: {fileID: 21300000, guid: e1d272859333bfd4db70860e2d216eb6, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: drinkyoghurt 1 glas, 250 ml
+      name: drinkyoghurt 1 glas
       value: 155
       sprite: {fileID: 21300000, guid: 0daf8176635ad834a88b199217812bf7, type: 3}
     cardDataB:
       textOrImage: 3
-      name: drinkyoghurt 1 glas, 250 ml
+      name: drinkyoghurt 1 glas
       value: 155
       sprite: {fileID: 21300000, guid: 0daf8176635ad834a88b199217812bf7, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: dubbeldrank 1 glas, 250 ml
+      name: dubbeldrank 1 glas
       value: 135
       sprite: {fileID: 21300000, guid: 15e5bda43e6f3f44c8833217e17dcb67, type: 3}
     cardDataB:
       textOrImage: 3
-      name: dubbeldrank 1 glas, 250 ml
+      name: dubbeldrank 1 glas
       value: 135
       sprite: {fileID: 21300000, guid: 15e5bda43e6f3f44c8833217e17dcb67, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: energiedrank 1 glas, 250 ml
+      name: energiedrank 1 glas
       value: 113
       sprite: {fileID: 21300000, guid: 68f40f5f946ff5f429216bff8c09da65, type: 3}
     cardDataB:
       textOrImage: 3
-      name: energiedrank 1 glas, 250 ml
+      name: energiedrank 1 glas
       value: 113
       sprite: {fileID: 21300000, guid: 68f40f5f946ff5f429216bff8c09da65, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: ijsthee 1 glas, 250 ml
+      name: ijsthee 1 glas
       value: 80
       sprite: {fileID: 21300000, guid: 8de03a60392ce6e468fa356ff8a196b3, type: 3}
     cardDataB:
       textOrImage: 3
-      name: ijsthee 1 glas, 250 ml
+      name: ijsthee 1 glas
       value: 80
       sprite: {fileID: 21300000, guid: 8de03a60392ce6e468fa356ff8a196b3, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: karnemelk 1 glas, 250 ml
+      name: karnemelk 1 glas
       value: 78
       sprite: {fileID: 21300000, guid: f8839a0f8ddefcb4fb9d787d3e198da9, type: 3}
     cardDataB:
       textOrImage: 3
-      name: karnemelk 1 glas, 250 ml
+      name: karnemelk 1 glas
       value: 78
       sprite: {fileID: 21300000, guid: f8839a0f8ddefcb4fb9d787d3e198da9, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: koffie (zwart) 1 glas, 250 ml
+      name: koffie (zwart) 1 glas
       value: 0
       sprite: {fileID: 21300000, guid: a28b10a7d47a38e4c97164e72b6d1f02, type: 3}
     cardDataB:
       textOrImage: 3
-      name: koffie (zwart) 1 glas, 250 ml
+      name: koffie (zwart) 1 glas
       value: 0
       sprite: {fileID: 21300000, guid: a28b10a7d47a38e4c97164e72b6d1f02, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: koffie verkeerd 1 glas, 250 ml
+      name: koffie verkeerd 1 glas
       value: 75
       sprite: {fileID: 21300000, guid: 1138f5abda661ae49a9a49ded5463336, type: 3}
     cardDataB:
       textOrImage: 3
-      name: koffie verkeerd 1 glas, 250 ml
+      name: koffie verkeerd 1 glas
       value: 75
       sprite: {fileID: 21300000, guid: 1138f5abda661ae49a9a49ded5463336, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: melk (halfvolle) 1 glas, 250 ml
+      name: melk (halfvolle) 1 glas
       value: 115
       sprite: {fileID: 21300000, guid: 017a9e933ec9e8e4a9a4f5943a3f2c45, type: 3}
     cardDataB:
       textOrImage: 3
-      name: melk (halfvolle) 1 glas, 250 ml
+      name: melk (halfvolle) 1 glas
       value: 115
       sprite: {fileID: 21300000, guid: 017a9e933ec9e8e4a9a4f5943a3f2c45, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: sinaasappelsap 1 glas, 250 ml
+      name: sinaasappelsap 1 glas
       value: 110
       sprite: {fileID: 21300000, guid: d8d053f835243214794fc289a93e23e3, type: 3}
     cardDataB:
       textOrImage: 3
-      name: sinaasappelsap 1 glas, 250 ml
+      name: sinaasappelsap 1 glas
       value: 110
       sprite: {fileID: 21300000, guid: d8d053f835243214794fc289a93e23e3, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: thee 1 glas, 250 ml
+      name: thee 1 glas
       value: 0
       sprite: {fileID: 21300000, guid: d7a28c7fd2c0d674984cee027cafd6aa, type: 3}
     cardDataB:
       textOrImage: 3
-      name: thee 1 glas, 250 ml
+      name: thee 1 glas
       value: 0
       sprite: {fileID: 21300000, guid: d7a28c7fd2c0d674984cee027cafd6aa, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: water 1 glas, 250 ml
+      name: water 1 glas
       value: 0
       sprite: {fileID: 21300000, guid: 4ddbf0c9931ac6d43bab1ba3a18ea833, type: 3}
     cardDataB:
       textOrImage: 3
-      name: water 1 glas, 250 ml
+      name: water 1 glas
       value: 0
       sprite: {fileID: 21300000, guid: 4ddbf0c9931ac6d43bab1ba3a18ea833, type: 3}
   - cardDataA:
       textOrImage: 1
-      name: wijn 1 wijn glas, 150 ml
+      name: wijn 1 wijn glas
       value: 144
       sprite: {fileID: 21300000, guid: 46f6aaa4b5541f446ad7c88c6ca04080, type: 3}
     cardDataB:
       textOrImage: 3
-      name: wijn 1 wijn glas, 150 ml
+      name: wijn 1 wijn glas
       value: 144
       sprite: {fileID: 21300000, guid: 46f6aaa4b5541f446ad7c88c6ca04080, type: 3}
   sourceCsv: D:\Data\Desktop\calorie stuff\Drinks.csv

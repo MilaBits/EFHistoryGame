@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -15,7 +14,7 @@ namespace Timeline
 		private TimeCard _activeCard;
 		private int _score;
 		private bool _interactable = true;
-		private int turns;
+		private int _turns;
 		[SerializeField]
 		private float allowedInaccuracy = default;
 		[SerializeField]
@@ -42,7 +41,7 @@ namespace Timeline
 			if (_activeCard) _activeCard.Deactivate();
 
 			List<TimeCard> availableCards = _cards.Where(x => !x.done).ToList();
-			if (availableCards.Count < 1 || turns >= 3)
+			if (availableCards.Count < 1 || _turns >= 3)
 			{
 				gameDone.Invoke();
 				return;
@@ -166,7 +165,7 @@ namespace Timeline
 
 		private IEnumerator ReturnCards(List<TimeCard> cards)
 		{
-			turns++;
+			_turns++;
 			for (var i = 0; i < cards.Count; i++) yield return StartCoroutine(ReturnCard(cards[i], .1f, cardSlots[i]));
 			if (!ActivateFirstCard()) NextCard(false);
 		}
