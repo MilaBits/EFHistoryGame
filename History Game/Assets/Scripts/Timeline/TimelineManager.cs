@@ -173,8 +173,8 @@ namespace Timeline
 		private IEnumerator ReturnCard(TimeCard card, float waitTime, RectTransform target)
 		{
 			yield return new WaitForSeconds(waitTime);
-			float value = (float) card.wrongCount / _gamePreset.wrongCount;
-			card.SetFill(value, Color.Lerp(Color.yellow, Color.red, value));
+			float value = 1 - ((float) card.wrongCount / _gamePreset.wrongCount);
+			card.SetFill(value, Color.Lerp(Color.red, Color.yellow, value));
 			card.MoveBack(target);
 		}
 
